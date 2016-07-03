@@ -2,6 +2,8 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: 1em;
+  border-bottom: 1px solid #333;
+  padding: 5px 10px 10px 15px;
 
   &__figure {
     margin-right: 1em;
