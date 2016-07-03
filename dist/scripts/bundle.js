@@ -35680,8 +35680,6 @@ var _landing2 = _interopRequireDefault(_landing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import $ from 'jquery';
-
 var app = _react2.default.createElement(
   _reactRouter.Router,
   { history: _reactRouter.hashHistory },
@@ -35692,6 +35690,7 @@ var app = _react2.default.createElement(
     _react2.default.createElement(_reactRouter.Route, { path: 'landing', component: _landing2.default })
   )
 );
+// import jQuery from 'jquery';
 
 (0, _jquery2.default)(function () {
   _reactDom2.default.render(app, document.getElementById('react-app'), function () {

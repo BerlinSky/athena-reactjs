@@ -36,9 +36,7 @@ export default class Layout extends React.Component {
         </section>
 
         <footer className="l-footer footer">
-
           <div className="copyright">&copy; Inspired by Athena</div>
-          
         </footer>
 
       </div>

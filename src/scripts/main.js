@@ -1,8 +1,7 @@
-// import $ from 'jquery';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
+import $ from 'jquery';
+// import jQuery from 'jquery';
 
 import {hashHistory, Router, Route, Redirect} from 'react-router';
 
@@ -19,7 +18,7 @@ const app = (
   </Router>
 )
 
-jQuery(function() {
+$(function() {
   ReactDOM.render(
     app,
     document.getElementById('react-app'),
