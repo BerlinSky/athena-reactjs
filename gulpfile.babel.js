@@ -63,7 +63,7 @@ gulp.task('transpile', ['lint'], () => bundle());
 gulp.task('lint', () => {
 	log('lint task started');
 
-  return gulp.src(['src/**/*.js', 'gulpfile.babel.js'])
+  return gulp.src(['src/scripts/**/*.js', 'gulpfile.babel.js'])
     .pipe(eslint())
     .pipe(eslint.format())
 });
@@ -101,7 +101,8 @@ gulp.task('sass-watch', ['sass'], () => sync.reload());
 gulp.task('watch', ['serve'], () => {
   gulp.watch('src/*.html', ['html-watch'])
   gulp.watch(config.paths.sass, ['sass-watch'])
-  gulp.watch('src/scripts/**/*', ['js-watch'])
+  gulp.watch('src/scripts/**/*.js', ['js-watch'])
+  gulp.watch('src/scripts/**/*.jsx', ['js-watch'])
 })
 
 gulp.task('default', ['watch']);
