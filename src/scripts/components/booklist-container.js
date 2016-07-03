@@ -1,44 +1,47 @@
 import React from 'react';
 import $ from 'jquery';
 
+import BooklistPanel from "./booklist-panel";
+
 export default class BooklistContainer extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      comments: []
+      booklist: []
     };
   }
 
   componentWillMount() {
-    this._fetchComments();
+    this._fetchBooklist();
   }
 
   render() {
+    const booklist = this._getBooklist();
+
     return (
       <div className="panelContainer">
-        <div className="media">
-        <img className="media__figure image" src="./images/the-grapes-of-wrath.jpg" alt="image" />
-         <div className="media__body">
-           <h3 className="media__title">The Grapes of Wrath</h3>
-           <div className="media__subtitle">by John Steinbeck</div>
-           <p className="media__description">
-            An epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads.
-           </p>
-          </div>
-        </div>
+        { booklist }
       </div>
     )
   }
 
-  _fetchComments() {
+  _getBooklist() {
+    return this.state.booklist.map((book) => {
+      return <BooklistPanel
+              {...book}
+              key={book.id} />
+    });
+  }
+
+  _fetchBooklist() {
     $.ajax({
       method: 'GET',
       url: this.props.apiUrl,
-      success: (comments) => {
-        this.setState({ comments })
+      success: (booklist) => {
+        this.setState({ booklist })
 
-      console.info('comments', comments.length);
+      console.info('booklist', booklist.length);
 
       }
     });

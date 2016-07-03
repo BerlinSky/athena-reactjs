@@ -35547,6 +35547,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -35556,6 +35558,10 @@ var _react2 = _interopRequireDefault(_react);
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
+
+var _booklistPanel = require('./booklist-panel');
+
+var _booklistPanel2 = _interopRequireDefault(_booklistPanel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35574,12 +35580,102 @@ var BooklistContainer = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BooklistContainer).call(this));
 
     _this.state = {
-      comments: []
+      booklist: []
     };
     return _this;
   }
 
   _createClass(BooklistContainer, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this._fetchBooklist();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var booklist = this._getBooklist();
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'panelContainer' },
+        booklist
+      );
+    }
+  }, {
+    key: '_getBooklist',
+    value: function _getBooklist() {
+      return this.state.booklist.map(function (book) {
+        return _react2.default.createElement(_booklistPanel2.default, _extends({}, book, {
+          key: book.id }));
+      });
+    }
+  }, {
+    key: '_fetchBooklist',
+    value: function _fetchBooklist() {
+      var _this2 = this;
+
+      _jquery2.default.ajax({
+        method: 'GET',
+        url: this.props.apiUrl,
+        success: function success(booklist) {
+          _this2.setState({ booklist: booklist });
+
+          console.info('booklist', booklist.length);
+        }
+      });
+    }
+  }]);
+
+  return BooklistContainer;
+}(_react2.default.Component);
+
+exports.default = BooklistContainer;
+
+
+BooklistContainer.propTypes = {
+  apiUrl: _react2.default.PropTypes.string.isRequired
+};
+
+},{"./booklist-panel":234,"jquery":49,"react":230}],234:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BooklistPanel = function (_React$Component) {
+  _inherits(BooklistPanel, _React$Component);
+
+  function BooklistPanel() {
+    _classCallCheck(this, BooklistPanel);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BooklistPanel).call(this));
+
+    _this.state = {
+      comments: []
+    };
+    return _this;
+  }
+
+  _createClass(BooklistPanel, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       this._fetchComments();
@@ -35589,29 +35685,25 @@ var BooklistContainer = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'panelContainer' },
+        { className: 'media' },
+        _react2.default.createElement('img', { className: 'media__figure image', src: './images/the-grapes-of-wrath.jpg', alt: 'image' }),
         _react2.default.createElement(
           'div',
-          { className: 'media' },
-          _react2.default.createElement('img', { className: 'media__figure image', src: './images/the-grapes-of-wrath.jpg', alt: 'image' }),
+          { className: 'media__body' },
+          _react2.default.createElement(
+            'h3',
+            { className: 'media__title' },
+            'The Grapes of Wrath'
+          ),
           _react2.default.createElement(
             'div',
-            { className: 'media__body' },
-            _react2.default.createElement(
-              'h3',
-              { className: 'media__title' },
-              'The Grapes of Wrath'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'media__subtitle' },
-              'by John Steinbeck'
-            ),
-            _react2.default.createElement(
-              'p',
-              { className: 'media__description' },
-              'An epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads.'
-            )
+            { className: 'media__subtitle' },
+            'by John Steinbeck'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'media__description' },
+            'An epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads.'
           )
         )
       );
@@ -35633,17 +35725,12 @@ var BooklistContainer = function (_React$Component) {
     }
   }]);
 
-  return BooklistContainer;
+  return BooklistPanel;
 }(_react2.default.Component);
 
-exports.default = BooklistContainer;
+exports.default = BooklistPanel;
 
-
-BooklistContainer.propTypes = {
-  apiUrl: _react2.default.PropTypes.string.isRequired
-};
-
-},{"jquery":49,"react":230}],234:[function(require,module,exports){
+},{"jquery":49,"react":230}],235:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35693,7 +35780,7 @@ var AppFooter = function (_React$Component) {
 
 exports.default = AppFooter;
 
-},{"react":230}],235:[function(require,module,exports){
+},{"react":230}],236:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35774,7 +35861,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":230}],236:[function(require,module,exports){
+},{"react":230}],237:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35848,7 +35935,7 @@ var Layout = function (_React$Component) {
 
 exports.default = Layout;
 
-},{"../components/footer":234,"../components/navigation":235,"react":230,"react-router":82}],237:[function(require,module,exports){
+},{"../components/footer":235,"../components/navigation":236,"react":230,"react-router":82}],238:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -35892,7 +35979,7 @@ var app = _react2.default.createElement(
   });
 });
 
-},{"./layout/layout":236,"./pages/landing":238,"jquery":49,"react":230,"react-dom":52,"react-router":82}],238:[function(require,module,exports){
+},{"./layout/layout":237,"./pages/landing":239,"jquery":49,"react":230,"react-dom":52,"react-router":82}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35956,5 +36043,5 @@ var Landing = function (_React$Component) {
 
 exports.default = Landing;
 
-},{"../components/booklist-container.js":233,"react":230}]},{},[237])
+},{"../components/booklist-container.js":233,"react":230}]},{},[238])
 //# sourceMappingURL=bundle.js.map
