@@ -35705,6 +35705,15 @@ var BooklistPanel = function (_React$Component) {
             'p',
             { className: 'media__description' },
             this.props.description
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: '' },
+            _react2.default.createElement(
+              'a',
+              { className: 'media__button' },
+              'remove book'
+            )
           )
         )
       );
