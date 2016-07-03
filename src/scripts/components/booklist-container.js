@@ -44,3 +44,7 @@ export default class BooklistContainer extends React.Component {
     });
   }
 }
+
+BooklistContainer.propTypes = {
+  apiUrl: React.PropTypes.string.isRequired
+}

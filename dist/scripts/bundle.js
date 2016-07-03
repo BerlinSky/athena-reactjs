@@ -35638,6 +35638,11 @@ var BooklistContainer = function (_React$Component) {
 
 exports.default = BooklistContainer;
 
+
+BooklistContainer.propTypes = {
+  apiUrl: _react2.default.PropTypes.string.isRequired
+};
+
 },{"jquery":49,"react":230}],234:[function(require,module,exports){
 "use strict";
 
