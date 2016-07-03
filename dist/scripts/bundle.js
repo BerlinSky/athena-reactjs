@@ -35686,24 +35686,25 @@ var BooklistPanel = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'media' },
-        _react2.default.createElement('img', { className: 'media__figure image', src: './images/the-grapes-of-wrath.jpg', alt: 'image' }),
+        _react2.default.createElement('img', { className: 'media__figure image', src: this.props.imagerUrl, alt: 'image' }),
         _react2.default.createElement(
           'div',
           { className: 'media__body' },
           _react2.default.createElement(
             'h3',
             { className: 'media__title' },
-            'The Grapes of Wrath'
+            this.props.title
           ),
           _react2.default.createElement(
             'div',
             { className: 'media__subtitle' },
-            'by John Steinbeck'
+            'by ',
+            this.props.author
           ),
           _react2.default.createElement(
             'p',
             { className: 'media__description' },
-            'An epic of the Great Depression chronicles the Dust Bowl migration of the 1930s and tells the story of one Oklahoma farm family, the Joads.'
+            this.props.description
           )
         )
       );
