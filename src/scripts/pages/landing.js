@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BooklistPanel from '../components/booklist-panel';
+import BooklistContainer from '../components/booklist-container.js';
 
 export default class Landing extends React.Component {
   render() {
@@ -12,7 +12,9 @@ export default class Landing extends React.Component {
           </div>
           <video className="siteShow" src="./movies/In-And-Out.mp4" autoPlay loop></video> 
         </div>
-        <BooklistPanel />
+
+        <BooklistContainer apiUrl="data/booklist.json" />
+
       </section>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-export default class BooklistPanel extends React.Component {
+export default class BooklistContainer extends React.Component {
   constructor() {
     super();
 
