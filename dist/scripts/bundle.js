@@ -35541,6 +35541,137 @@ module.exports = warning;
 }).call(this,require('_process'))
 
 },{"_process":51}],233:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AppFooter = function (_React$Component) {
+  _inherits(AppFooter, _React$Component);
+
+  function AppFooter() {
+    _classCallCheck(this, AppFooter);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(AppFooter).apply(this, arguments));
+  }
+
+  _createClass(AppFooter, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "footer",
+        { className: "l-footer footer" },
+        _react2.default.createElement(
+          "div",
+          { className: "copyright" },
+          "© Inspired by Athena"
+        )
+      );
+    }
+  }]);
+
+  return AppFooter;
+}(_react2.default.Component);
+
+exports.default = AppFooter;
+
+},{"react":230}],234:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AppNavigation = function (_React$Component) {
+  _inherits(AppNavigation, _React$Component);
+
+  function AppNavigation() {
+    _classCallCheck(this, AppNavigation);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(AppNavigation).apply(this, arguments));
+  }
+
+  _createClass(AppNavigation, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "navigation",
+        { className: "l-navigation navigation" },
+        _react2.default.createElement(
+          "h1",
+          { className: "logo" },
+          _react2.default.createElement(
+            "a",
+            { href: "#" },
+            "Athena"
+          )
+        ),
+        _react2.default.createElement("nav", { className: "l-navlinks navlinks" }),
+        _react2.default.createElement(
+          "nav",
+          { className: "navActions" },
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              { className: "navActions__item navActions__item__search visble" },
+              _react2.default.createElement(
+                "a",
+                { className: "js-buttonSearchOpen fa-search", href: "#search" },
+                "Search"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              { className: "navActions__item menu" },
+              _react2.default.createElement(
+                "a",
+                { className: "js-actionMenu fa-bars" },
+                "Menu"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return AppNavigation;
+}(_react2.default.Component);
+
+exports.default = AppNavigation;
+
+},{"react":230}],235:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35554,6 +35685,14 @@ var _react = require('react');
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
+
+var _navigation = require('../components/navigation');
+
+var _navigation2 = _interopRequireDefault(_navigation);
+
+var _footer = require('../components/footer');
+
+var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35578,46 +35717,7 @@ var Layout = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'l-siteContainer l-header-fixed l-footer-fixed siteContainer' },
-        _react2.default.createElement(
-          'navigation',
-          { className: 'l-navigation navigation' },
-          _react2.default.createElement(
-            'h1',
-            { className: 'logo' },
-            _react2.default.createElement(
-              'a',
-              { href: '#' },
-              'Athena'
-            )
-          ),
-          _react2.default.createElement('nav', { className: 'l-navlinks navlinks' }),
-          _react2.default.createElement(
-            'nav',
-            { className: 'navActions' },
-            _react2.default.createElement(
-              'ul',
-              null,
-              _react2.default.createElement(
-                'li',
-                { className: 'navActions__item navActions__item__search visble' },
-                _react2.default.createElement(
-                  'a',
-                  { className: 'js-buttonSearchOpen fa-search', href: '#search' },
-                  'Search'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: 'navActions__item menu' },
-                _react2.default.createElement(
-                  'a',
-                  { className: 'js-actionMenu fa-bars' },
-                  'Menu'
-                )
-              )
-            )
-          )
-        ),
+        _react2.default.createElement(_navigation2.default, null),
         this.props.children,
         _react2.default.createElement(
           'section',
@@ -35635,15 +35735,7 @@ var Layout = function (_React$Component) {
           _react2.default.createElement('div', { className: 'searchContent' }),
           _react2.default.createElement('span', { className: 'searchClose js-buttonSearchClose' })
         ),
-        _react2.default.createElement(
-          'footer',
-          { className: 'l-footer footer' },
-          _react2.default.createElement(
-            'div',
-            { className: 'copyright' },
-            '© Inspired by Athena'
-          )
-        )
+        _react2.default.createElement(_footer2.default, null)
       );
     }
   }]);
@@ -35653,7 +35745,7 @@ var Layout = function (_React$Component) {
 
 exports.default = Layout;
 
-},{"react":230,"react-router":82}],234:[function(require,module,exports){
+},{"../components/footer":233,"../components/navigation":234,"react":230,"react-router":82}],236:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -35690,7 +35782,6 @@ var app = _react2.default.createElement(
     _react2.default.createElement(_reactRouter.Route, { path: 'landing', component: _landing2.default })
   )
 );
-// import jQuery from 'jquery';
 
 (0, _jquery2.default)(function () {
   _reactDom2.default.render(app, document.getElementById('react-app'), function () {
@@ -35698,7 +35789,7 @@ var app = _react2.default.createElement(
   });
 });
 
-},{"./layout/layout":233,"./pages/landing":235,"jquery":49,"react":230,"react-dom":52,"react-router":82}],235:[function(require,module,exports){
+},{"./layout/layout":235,"./pages/landing":237,"jquery":49,"react":230,"react-dom":52,"react-router":82}],237:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35785,5 +35876,5 @@ var Landing = function (_React$Component) {
 
 exports.default = Landing;
 
-},{"react":230}]},{},[234])
+},{"react":230}]},{},[236])
 //# sourceMappingURL=bundle.js.map

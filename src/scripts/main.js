@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-// import jQuery from 'jquery';
 
 import {hashHistory, Router, Route, Redirect} from 'react-router';
 
