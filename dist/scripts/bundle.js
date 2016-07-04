@@ -35647,7 +35647,7 @@ var BooklistContainer = function (_React$Component) {
   }, {
     key: '_addBook',
     value: function _addBook(title, author, description, imageUrl) {
-      console.log('title', title);
+      console.log('imageUrl', imageUrl);
 
       var book = {
         id: this.state.booklist.length + 1,
@@ -35778,10 +35778,7 @@ var BooklistForm = function (_React$Component) {
     value: function _handleSubmit(e) {
       e.preventDefault();
 
-      console.log("handleSummit");
-      console.log("this._title", this._title.value);
-
-      this.props.addBook(this._title.value, this._author.value, this._imageUrl.value, this._description.value);
+      this.props.addBook(this._title.value, this._author.value, this._description.value, this._imageUrl.value);
 
       this._title.value = '';
       this._author.value = '';
@@ -35838,7 +35835,7 @@ var BooklistPanel = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'media' },
-        _react2.default.createElement('img', { className: 'media__figure image', src: this.props.imagerUrl, alt: 'image' }),
+        _react2.default.createElement('img', { className: 'media__figure image', src: this.props.imageUrl, alt: 'image' }),
         _react2.default.createElement(
           'div',
           { className: 'media__body' },

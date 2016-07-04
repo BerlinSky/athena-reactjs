@@ -47,10 +47,7 @@ export default class BooklistForm extends React.Component {
   _handleSubmit(e) {
     e.preventDefault();
 
-    console.log("handleSummit");
-    console.log("this._title", this._title.value);
-
-    this.props.addBook(this._title.value, this._author.value, this._imageUrl.value, this._description.value);
+    this.props.addBook(this._title.value, this._author.value, this._description.value, this._imageUrl.value);
 
     this._title.value = '';
     this._author.value = '';

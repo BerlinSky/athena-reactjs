@@ -62,7 +62,7 @@ export default class BooklistContainer extends React.Component {
   }
 
   _addBook(title, author, description, imageUrl) {
-    console.log('title', title);
+    console.log('imageUrl', imageUrl);
 
     const book = {
       id: this.state.booklist.length + 1,

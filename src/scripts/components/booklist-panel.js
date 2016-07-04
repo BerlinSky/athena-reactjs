@@ -11,7 +11,7 @@ export default class BooklistPanel extends React.Component {
   render() {
     return (
      <div className="media">
-       <img className="media__figure image" src={ this.props.imagerUrl } alt="image" />
+       <img className="media__figure image" src={ this.props.imageUrl } alt="image" />
        <div className="media__body">
          <h3 className="media__title">{ this.props.title }</h3>
          <div className="media__subtitle">by { this.props.author }</div>
