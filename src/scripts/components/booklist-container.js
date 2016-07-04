@@ -13,6 +13,7 @@ export default class BooklistContainer extends React.Component {
     };
 
     this._removeBook = this._removeBook.bind(this);
+    this._addBook = this._addBook.bind(this);
   }
 
   componentWillMount() {
@@ -24,7 +25,7 @@ export default class BooklistContainer extends React.Component {
 
     return (
       <div className="panelContainer">
-        <BooklistForm />
+        <BooklistForm addBook={ this._addBook } />
         
         { booklist }
       </div>
@@ -59,6 +60,23 @@ export default class BooklistContainer extends React.Component {
 
     this.setState({ booklist });
   }
+
+  _addBook(title, author, description, imageUrl) {
+    console.log('title', title);
+
+    const book = {
+      id: this.state.booklist.length + 1,
+      title: title,
+      author: author,
+      description: description,
+      imageUrl: imageUrl
+    };
+
+    this.setState({
+      booklist: this.state.booklist.concat([book])
+    });
+  }
+
 }
 
 BooklistContainer.propTypes = {

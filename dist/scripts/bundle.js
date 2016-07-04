@@ -35588,6 +35588,7 @@ var BooklistContainer = function (_React$Component) {
     };
 
     _this._removeBook = _this._removeBook.bind(_this);
+    _this._addBook = _this._addBook.bind(_this);
     return _this;
   }
 
@@ -35604,7 +35605,7 @@ var BooklistContainer = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'panelContainer' },
-        _react2.default.createElement(_booklistForm2.default, null),
+        _react2.default.createElement(_booklistForm2.default, { addBook: this._addBook }),
         booklist
       );
     }
@@ -35642,6 +35643,23 @@ var BooklistContainer = function (_React$Component) {
       });
 
       this.setState({ booklist: booklist });
+    }
+  }, {
+    key: '_addBook',
+    value: function _addBook(title, author, description, imageUrl) {
+      console.log('title', title);
+
+      var book = {
+        id: this.state.booklist.length + 1,
+        title: title,
+        author: author,
+        description: description,
+        imageUrl: imageUrl
+      };
+
+      this.setState({
+        booklist: this.state.booklist.concat([book])
+      });
     }
   }]);
 
@@ -35687,62 +35705,88 @@ var BooklistForm = function (_React$Component) {
     _this.state = {
       comments: []
     };
+
+    _this._handleSubmit = _this._handleSubmit.bind(_this);
     return _this;
   }
 
   _createClass(BooklistForm, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         "div",
         { className: "formContainer" },
         _react2.default.createElement(
           "form",
-          { className: "actionForm" },
+          { action: "" },
           _react2.default.createElement(
             "div",
-            { className: "actionForm__section" },
+            { className: "actionForm" },
             _react2.default.createElement(
               "div",
-              { className: "actionForm__panel" },
-              _react2.default.createElement("input", { type: "text", placeholder: "Title" })
+              { className: "actionForm__section" },
+              _react2.default.createElement(
+                "div",
+                { className: "actionForm__panel" },
+                _react2.default.createElement("input", { type: "text", placeholder: "Title", ref: function ref(c) {
+                    return _this2._title = c;
+                  } })
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "actionForm__panel" },
+                _react2.default.createElement("input", { type: "text", placeholder: "Author", ref: function ref(v) {
+                    return _this2._author = v;
+                  } })
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "actionForm__panel" },
+                _react2.default.createElement("input", { type: "text", placeholder: "Image Link", ref: function ref(v) {
+                    return _this2._imageUrl = v;
+                  } })
+              )
             ),
             _react2.default.createElement(
               "div",
-              { className: "actionForm__panel" },
-              _react2.default.createElement("input", { type: "text", placeholder: "Author" })
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "actionForm__panel" },
-              _react2.default.createElement("input", { type: "text", placeholder: "Image Link" })
+              { className: "actionForm__section" },
+              _react2.default.createElement(
+                "div",
+                { className: "actionForm__panel" },
+                _react2.default.createElement("textarea", { cols: "10", rows: "5", placeholder: "Description", ref: function ref(v) {
+                    return _this2._description = v;
+                  } })
+              )
             )
           ),
           _react2.default.createElement(
             "div",
-            { className: "actionForm__section" },
+            { className: "buttonPanel" },
             _react2.default.createElement(
-              "div",
-              { className: "actionForm__panel" },
-              _react2.default.createElement("textarea", { cols: "10", rows: "5", placeholder: "Description" })
+              "a",
+              { className: "actionButton", onClick: this._handleSubmit },
+              "add book"
             )
-          )
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "buttonPanel" },
-          _react2.default.createElement(
-            "a",
-            { className: "actionButton" },
-            "add book"
           )
         )
       );
     }
   }, {
-    key: "_handleAddition",
-    value: function _handleAddition(e) {
+    key: "_handleSubmit",
+    value: function _handleSubmit(e) {
       e.preventDefault();
+
+      console.log("handleSummit");
+      console.log("this._title", this._title.value);
+
+      this.props.addBook(this._title.value, this._author.value, this._imageUrl.value, this._description.value);
+
+      this._title.value = '';
+      this._author.value = '';
+      this._imageUrl.value = '';
+      this._description.value = '';
     }
   }]);
 
@@ -35784,20 +35828,11 @@ var BooklistPanel = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BooklistPanel).call(this));
 
-    _this.state = {
-      comments: []
-    };
-
     _this._handleRemove = _this._handleRemove.bind(_this);
     return _this;
   }
 
   _createClass(BooklistPanel, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this._fetchComments();
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -35834,21 +35869,6 @@ var BooklistPanel = function (_React$Component) {
           )
         )
       );
-    }
-  }, {
-    key: '_fetchComments',
-    value: function _fetchComments() {
-      var _this2 = this;
-
-      _jquery2.default.ajax({
-        method: 'GET',
-        url: this.props.apiUrl,
-        success: function success(comments) {
-          _this2.setState({ comments: comments });
-
-          console.info('comments', comments.length);
-        }
-      });
     }
   }, {
     key: '_handleRemove',

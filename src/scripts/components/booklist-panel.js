@@ -5,15 +5,7 @@ export default class BooklistPanel extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      comments: []
-    };
-
     this._handleRemove = this._handleRemove.bind(this);
-  }
-
-  componentWillMount() {
-    this._fetchComments();
   }
 
   render() {
@@ -32,19 +24,6 @@ export default class BooklistPanel extends React.Component {
        </div>
      </div>
     )
-  }
-
-  _fetchComments() {
-    $.ajax({
-      method: 'GET',
-      url: this.props.apiUrl,
-      success: (comments) => {
-        this.setState({ comments })
-
-      console.info('comments', comments.length);
-
-      }
-    });
   }
 
   _handleRemove(e) {
