@@ -10,7 +10,10 @@ export default class BooklistContainer extends React.Component {
     this.state = {
       booklist: []
     };
+
+    this._removeBook = this._removeBook.bind(this);
   }
+
 
   componentWillMount() {
     this._fetchBooklist();
@@ -30,6 +33,7 @@ export default class BooklistContainer extends React.Component {
     return this.state.booklist.map((book) => {
       return <BooklistPanel
               {...book}
+              onRemove={this._removeBook}
               key={book.id} />
     });
   }
@@ -42,9 +46,16 @@ export default class BooklistContainer extends React.Component {
         this.setState({ booklist })
 
       console.info('booklist', booklist.length);
-
       }
     });
+  }
+
+  _removeBook(bookId) {
+    const booklist = this.state.booklist.filter (
+      book => book.id !== bookId
+    );
+
+    this.setState({ booklist });
   }
 }
 

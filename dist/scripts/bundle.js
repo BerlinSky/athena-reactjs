@@ -35582,6 +35582,8 @@ var BooklistContainer = function (_React$Component) {
     _this.state = {
       booklist: []
     };
+
+    _this._removeBook = _this._removeBook.bind(_this);
     return _this;
   }
 
@@ -35604,25 +35606,37 @@ var BooklistContainer = function (_React$Component) {
   }, {
     key: '_getBooklist',
     value: function _getBooklist() {
+      var _this2 = this;
+
       return this.state.booklist.map(function (book) {
         return _react2.default.createElement(_booklistPanel2.default, _extends({}, book, {
+          onRemove: _this2._removeBook,
           key: book.id }));
       });
     }
   }, {
     key: '_fetchBooklist',
     value: function _fetchBooklist() {
-      var _this2 = this;
+      var _this3 = this;
 
       _jquery2.default.ajax({
         method: 'GET',
         url: this.props.apiUrl,
         success: function success(booklist) {
-          _this2.setState({ booklist: booklist });
+          _this3.setState({ booklist: booklist });
 
           console.info('booklist', booklist.length);
         }
       });
+    }
+  }, {
+    key: '_removeBook',
+    value: function _removeBook(bookId) {
+      var booklist = this.state.booklist.filter(function (book) {
+        return book.id !== bookId;
+      });
+
+      this.setState({ booklist: booklist });
     }
   }]);
 
@@ -35672,6 +35686,8 @@ var BooklistPanel = function (_React$Component) {
     _this.state = {
       comments: []
     };
+
+    _this._handleRemove = _this._handleRemove.bind(_this);
     return _this;
   }
 
@@ -35711,7 +35727,7 @@ var BooklistPanel = function (_React$Component) {
             { className: '' },
             _react2.default.createElement(
               'a',
-              { className: 'media__button' },
+              { className: 'media__button', onClick: this._handleRemove },
               'remove book'
             )
           )
@@ -35732,6 +35748,12 @@ var BooklistPanel = function (_React$Component) {
           console.info('comments', comments.length);
         }
       });
+    }
+  }, {
+    key: '_handleRemove',
+    value: function _handleRemove(e) {
+      e.preventDefault();
+      this.props.onRemove(this.props.id);
     }
   }]);
 

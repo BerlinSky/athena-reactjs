@@ -8,6 +8,8 @@ export default class BooklistPanel extends React.Component {
     this.state = {
       comments: []
     };
+
+    this._handleRemove = this._handleRemove.bind(this);
   }
 
   componentWillMount() {
@@ -24,7 +26,9 @@ export default class BooklistPanel extends React.Component {
          <p className="media__description">
            { this.props.description }
          </p>
-         <div className=""><a className="media__button">remove book</a></div>
+         <div className="">
+          <a className="media__button" onClick={ this._handleRemove }>remove book</a>
+         </div>
        </div>
      </div>
     )
@@ -42,4 +46,10 @@ export default class BooklistPanel extends React.Component {
       }
     });
   }
+
+  _handleRemove(e) {
+    e.preventDefault();
+    this.props.onRemove(this.props.id);
+  }
+
 }
