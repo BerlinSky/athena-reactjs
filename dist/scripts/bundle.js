@@ -35563,6 +35563,10 @@ var _booklistPanel = require('./booklist-panel');
 
 var _booklistPanel2 = _interopRequireDefault(_booklistPanel);
 
+var _booklistForm = require('./booklist-form');
+
+var _booklistForm2 = _interopRequireDefault(_booklistForm);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35600,6 +35604,7 @@ var BooklistContainer = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'panelContainer' },
+        _react2.default.createElement(_booklistForm2.default, null),
         booklist
       );
     }
@@ -35650,7 +35655,103 @@ BooklistContainer.propTypes = {
   apiUrl: _react2.default.PropTypes.string.isRequired
 };
 
-},{"./booklist-panel":234,"jquery":49,"react":230}],234:[function(require,module,exports){
+},{"./booklist-form":234,"./booklist-panel":235,"jquery":49,"react":230}],234:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BooklistForm = function (_React$Component) {
+  _inherits(BooklistForm, _React$Component);
+
+  function BooklistForm() {
+    _classCallCheck(this, BooklistForm);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BooklistForm).call(this));
+
+    _this.state = {
+      comments: []
+    };
+    return _this;
+  }
+
+  _createClass(BooklistForm, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "formContainer" },
+        _react2.default.createElement(
+          "form",
+          { className: "actionForm" },
+          _react2.default.createElement(
+            "div",
+            { className: "actionForm__section" },
+            _react2.default.createElement(
+              "div",
+              { className: "actionForm__panel" },
+              _react2.default.createElement("input", { type: "text", placeholder: "Title" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "actionForm__panel" },
+              _react2.default.createElement("input", { type: "text", placeholder: "Author" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "actionForm__panel" },
+              _react2.default.createElement("input", { type: "text", placeholder: "Image Link" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "actionForm__section" },
+            _react2.default.createElement(
+              "div",
+              { className: "actionForm__panel" },
+              _react2.default.createElement("textarea", { cols: "10", rows: "5", placeholder: "Description" })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "buttonPanel" },
+          _react2.default.createElement(
+            "a",
+            { className: "actionButton" },
+            "add book"
+          )
+        )
+      );
+    }
+  }, {
+    key: "_handleAddition",
+    value: function _handleAddition(e) {
+      e.preventDefault();
+    }
+  }]);
+
+  return BooklistForm;
+}(_react2.default.Component);
+
+exports.default = BooklistForm;
+
+},{"react":230}],235:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35724,7 +35825,7 @@ var BooklistPanel = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: '' },
+            { className: 'buttonPanel' },
             _react2.default.createElement(
               'a',
               { className: 'media__button', onClick: this._handleRemove },
@@ -35762,7 +35863,7 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"jquery":49,"react":230}],235:[function(require,module,exports){
+},{"jquery":49,"react":230}],236:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35812,7 +35913,7 @@ var AppFooter = function (_React$Component) {
 
 exports.default = AppFooter;
 
-},{"react":230}],236:[function(require,module,exports){
+},{"react":230}],237:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35893,7 +35994,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":230}],237:[function(require,module,exports){
+},{"react":230}],238:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35967,7 +36068,7 @@ var Layout = function (_React$Component) {
 
 exports.default = Layout;
 
-},{"../components/footer":235,"../components/navigation":236,"react":230,"react-router":82}],238:[function(require,module,exports){
+},{"../components/footer":236,"../components/navigation":237,"react":230,"react-router":82}],239:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -36011,7 +36112,7 @@ var app = _react2.default.createElement(
   });
 });
 
-},{"./layout/layout":237,"./pages/landing":239,"jquery":49,"react":230,"react-dom":52,"react-router":82}],239:[function(require,module,exports){
+},{"./layout/layout":238,"./pages/landing":240,"jquery":49,"react":230,"react-dom":52,"react-router":82}],240:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36075,5 +36176,5 @@ var Landing = function (_React$Component) {
 
 exports.default = Landing;
 
-},{"../components/booklist-container.js":233,"react":230}]},{},[238])
+},{"../components/booklist-container.js":233,"react":230}]},{},[239])
 //# sourceMappingURL=bundle.js.map

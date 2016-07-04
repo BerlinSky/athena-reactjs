@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 
 import BooklistPanel from "./booklist-panel";
+import BooklistForm from "./booklist-form";
 
 export default class BooklistContainer extends React.Component {
   constructor() {
@@ -14,7 +15,6 @@ export default class BooklistContainer extends React.Component {
     this._removeBook = this._removeBook.bind(this);
   }
 
-
   componentWillMount() {
     this._fetchBooklist();
   }
@@ -24,6 +24,8 @@ export default class BooklistContainer extends React.Component {
 
     return (
       <div className="panelContainer">
+        <BooklistForm />
+        
         { booklist }
       </div>
     )

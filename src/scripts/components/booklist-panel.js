@@ -26,7 +26,7 @@ export default class BooklistPanel extends React.Component {
          <p className="media__description">
            { this.props.description }
          </p>
-         <div className="">
+         <div className="buttonPanel">
           <a className="media__button" onClick={ this._handleRemove }>remove book</a>
          </div>
        </div>
