@@ -105,12 +105,7 @@ gulp.task('watch', ['serve'], () => {
   gulp.watch('src/scripts/**/*.jsx', ['js-watch'])
 })
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: './dist',
-    port: process.env.PORT || 5000
-  });
-});
+gulp.task('serveprod', () => sync.init({ server: 'dist' }));
 
 gulp.task('default', ['watch']);
 
