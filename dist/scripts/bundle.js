@@ -35793,7 +35793,7 @@ var BooklistForm = function (_React$Component) {
 exports.default = BooklistForm;
 
 },{"react":230}],235:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -35801,13 +35801,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35830,45 +35826,45 @@ var BooklistPanel = function (_React$Component) {
   }
 
   _createClass(BooklistPanel, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'media' },
-        _react2.default.createElement('img', { className: 'media__figure image', src: this.props.imageUrl, alt: 'image' }),
+        "div",
+        { className: "media" },
+        _react2.default.createElement("img", { className: "media__figure image", src: this.props.imageUrl, alt: "image" }),
         _react2.default.createElement(
-          'div',
-          { className: 'media__body' },
+          "div",
+          { className: "media__body" },
           _react2.default.createElement(
-            'h3',
-            { className: 'media__title' },
+            "h3",
+            { className: "media__title" },
             this.props.title
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'media__subtitle' },
-            'by ',
+            "div",
+            { className: "media__subtitle" },
+            "by ",
             this.props.author
           ),
           _react2.default.createElement(
-            'p',
-            { className: 'media__description' },
+            "p",
+            { className: "media__description" },
             this.props.description
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'buttonPanel' },
+            "div",
+            { className: "buttonPanel" },
             _react2.default.createElement(
-              'a',
-              { className: 'media__button', onClick: this._handleRemove },
-              'remove book'
+              "a",
+              { className: "media__button", onClick: this._handleRemove },
+              "remove book"
             )
           )
         )
       );
     }
   }, {
-    key: '_handleRemove',
+    key: "_handleRemove",
     value: function _handleRemove(e) {
       e.preventDefault();
       this.props.onRemove(this.props.id);
@@ -35880,7 +35876,7 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"jquery":49,"react":230}],236:[function(require,module,exports){
+},{"react":230}],236:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

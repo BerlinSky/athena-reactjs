@@ -1,4 +1,4 @@
-export default const posts = [
+const booklist = [
   {
     "id": 1,
     "title": "The Grapes of Wrath",
@@ -48,3 +48,5 @@ export default const posts = [
     "imageUrl-local": "./images/middle-march.jpg"
   }
 ];
+
+export default booklist;
