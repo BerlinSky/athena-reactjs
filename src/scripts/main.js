@@ -7,14 +7,15 @@ import { Provider } from 'react-redux';
 
 import store, { history } from './store';
 
+import App from './layout/app';
 import Layout from './layout/layout'
 import Landing from './pages/landing'
 
-const app = (
+const router = (
   <Provider store={store}>
     <Router history={history}>
       <Redirect from="/" to="/landing" />
-      <Route path="/" component={Layout}>
+      <Route path="/" component={App}>
         <IndexRoute component={Landing}>
         </IndexRoute>
         <Route path="landing" component={Landing} />
@@ -25,7 +26,7 @@ const app = (
 
 $(function() {
   ReactDOM.render(
-    app,
+    router,
     document.getElementById('react-app'),
     function() {
       console.timeEnd('react-app')
