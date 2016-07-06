@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
         <AppNavigation />
 
         {this.props.children}
-        
+
         <section className="searchContainer js-searchContainer">
           <form className="searchForm">
             <input className="searchForm__input" type="search" placeholder="Search..."/>

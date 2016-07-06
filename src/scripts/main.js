@@ -8,8 +8,8 @@ import { Provider } from 'react-redux';
 import store, { history } from './store';
 
 import App from './layout/app';
-import Layout from './layout/layout'
-import Landing from './pages/landing'
+import Layout from './layout/layout';
+import Landing from './pages/landing';
 
 const router = (
   <Provider store={store}>

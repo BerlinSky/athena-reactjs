@@ -37603,7 +37603,8 @@ var BooklistPanel = function (_React$Component) {
     key: "_handleRemove",
     value: function _handleRemove(e) {
       e.preventDefault();
-      this.props.onRemove(this.props.id);
+      // this.props.onRemove(this.props.id);
+      this.props.removeBook(this.props.id);
     }
   }]);
 
