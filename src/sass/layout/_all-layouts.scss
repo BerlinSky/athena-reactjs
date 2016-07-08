@@ -1,6 +1,6 @@
 .l-siteContainer {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
   & > * {
     flex:1 1 auto;
@@ -13,13 +13,28 @@
 
   .l-navlinks {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    @include respondTo(x-small) {
+      visibility: hidden;
+    } 
+
+    @include respondTo(small) {
+      visibility: hidden;
+    } 
+
+    // @include respondTo(medium) {
+    //   visibility: hidden;
+    // } 
   }
 }
 
 .l-footer {
   display: flex;
-  flex-direction: column;
+  // justify-content: space-between;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 }
 

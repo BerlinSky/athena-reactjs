@@ -37708,7 +37708,41 @@ var AppNavigation = function (_React$Component) {
             "Athena"
           )
         ),
-        _react2.default.createElement("nav", { className: "l-navlinks navlinks" }),
+        _react2.default.createElement(
+          "nav",
+          { className: "l-navlinks navlinks" },
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              { className: "navlinks__item" },
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Books"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              { className: "navlinks__item" },
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Authors"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              { className: "navlinks__item" },
+              _react2.default.createElement(
+                "a",
+                { href: "#" },
+                "Clubs"
+              )
+            )
+          )
+        ),
         _react2.default.createElement(
           "nav",
           { className: "navActions" },

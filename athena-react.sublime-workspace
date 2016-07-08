@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"remove",
+				"removeBook	(booklist-panel.js)"
+			],
+			[
+				"map",
+				"mapDispatchToProps"
+			],
+			[
+				"la",
+				"layout	(main.js)"
+			],
+			[
+				"fun",
+				"function	React.PropTypes.func"
+			],
+			[
 				"text",
 				"text-align"
 			],
@@ -62,10 +78,6 @@
 			[
 				"account",
 				"accountNumber"
-			],
-			[
-				"fun",
-				"function"
 			],
 			[
 				"search",
@@ -502,18 +514,6 @@
 			[
 				"main",
 				"mainJs"
-			],
-			[
-				"applica",
-				"applicationList	(index.html)"
-			],
-			[
-				"anu",
-				"angular-mocks/"
-			],
-			[
-				"a",
-				"appList.controller.js"
 			]
 		]
 	},
@@ -679,14 +679,29 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs"
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/dist",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/actions",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers"
 	],
 	"file_history":
 	[
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout/app.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout/layout.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages/landing.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/booklist-panel.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/main.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/gulpfile.babel.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers/index.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers/booklist.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/layout/_all-layouts.scss",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/actions/action-creator.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/store.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/booklist-panel.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/data/booklist.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/store.js",
 		"/Users/Scarecrow/Documents/5. Projects/learn-redux/client/data/posts.js",
@@ -694,7 +709,6 @@
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/dist/data/booklist.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/firebase.json",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/.firebaserc",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/gulpfile.babel.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/Procfile",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/booklist-form.js",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/components/comment-form.js",
@@ -709,10 +723,7 @@
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/components/comment.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules/_media.scss",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/components/comment-avatar-list.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages/landing.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/footer.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/main.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout/layout.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/navigation.js",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/app.js",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/layout/layout.js",
@@ -807,10 +818,7 @@
 		"/Users/Scarecrow/Documents/5. Projects/aphrodite/know-git.md",
 		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/main.scss",
 		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_all-modules.scss",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_brushed-metal.scss",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_brushed-metal-base.scss",
-		"/Users/Scarecrow/Documents/5. Projects/angular2-quick-start/dev/app.component.ts"
+		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_brushed-metal.scss"
 	],
 	"find":
 	{
@@ -878,6 +886,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this",
+			"remove",
+			"removeBook",
+			"Layout",
+			"app",
+			"bindActionCreators",
+			"Landing",
+			"history",
+			"browserHistory",
+			"hashHistory",
+			"browserHistory",
+			"state",
 			"visible",
 			"visble",
 			"modules",
@@ -993,19 +1013,7 @@
 			"appProd",
 			"Athena",
 			"padding",
-			"Berlin",
-			"artemis",
-			"container",
-			"countdown",
-			"assign",
-			"container",
-			"accountNumber",
-			"accountTitle",
-			"accountNumber",
-			"accountInfo",
-			"digest",
-			"accountInfo",
-			"accountManager"
+			"Berlin"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1212,6 +1220,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"main.j",
+				"src/scripts/main.js"
+			],
 			[
 				"_nav",
 				"src/sass/modules/_navigation.scss"

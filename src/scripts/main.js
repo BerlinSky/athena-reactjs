@@ -16,8 +16,7 @@ const router = (
     <Router history={history}>
       <Redirect from="/" to="/landing" />
       <Route path="/" component={App}>
-        <IndexRoute component={Landing}>
-        </IndexRoute>
+        <IndexRoute component={Landing} />
         <Route path="landing" component={Landing} />
       </Route>
     </Router>
