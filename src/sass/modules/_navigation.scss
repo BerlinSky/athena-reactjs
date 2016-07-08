@@ -59,8 +59,10 @@
   &__item {
     border-left: solid 1px _palette(border);
     line-height: 1;
-    margin-left: 1em;
+    // margin-left: 1em;
+    margin-right: 1em;
     padding-left: 1em;
+
 // background-color: green;
 
     &:first-child {
