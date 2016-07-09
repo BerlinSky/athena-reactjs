@@ -4,13 +4,15 @@ import $ from 'jquery';
 import BooklistPanel from "../views/booklist-panel";
 import BooklistForm from "../views/booklist-form";
 
-export default class BooklistContainer extends React.Component {
+export default class BooksContainer extends React.Component {
   constructor() {
     super();
 
     this.state = {
       booklist: []
     };
+
+    this.apiUrl = '../data/booklist.json';
 
     this._removeBook = this._removeBook.bind(this);
     this._addBook = this._addBook.bind(this);
@@ -44,7 +46,7 @@ export default class BooklistContainer extends React.Component {
   _fetchBooklist() {
     $.ajax({
       method: 'GET',
-      url: this.props.apiUrl,
+      url: this.apiUrl,
       success: (booklist) => {
         this.setState({ booklist })
 
@@ -79,6 +81,6 @@ export default class BooklistContainer extends React.Component {
 
 }
 
-BooklistContainer.propTypes = {
-  apiUrl: React.PropTypes.string.isRequired
-}
+// BooksContainer.propTypes = {
+//   apiUrl: React.PropTypes.string.isRequired
+// }
