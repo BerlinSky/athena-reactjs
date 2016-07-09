@@ -2,26 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-import { hashHistory, Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
-import { Provider } from 'react-redux';
+import router from "./router";
+// import { hashHistory, Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
+// import { Provider } from 'react-redux';
 
-import store, { history } from './store';
+// import store, { history } from './store';
 
-import App from './layout/app';
-import Layout from './layout/layout';
-import Landing from './pages/landing';
+// import App from './layout/app';
+// import Layout from './layout/layout';
+// import bookLanding from './pages/books-landing';
 
-const router = (
-  <Provider store={store}>
-    <Router history={history}>
-      <Redirect from="/" to="/landing" />
-      <Route path="/" component={App}>
-        <IndexRoute component={Landing} />
-        <Route path="landing" component={Landing} />
-      </Route>
-    </Router>
-  </Provider>
-)
+// const router = (
+//   <Provider store={store}>
+//     <Router history={history}>
+//       <Redirect from="/" to="/books" />
+//       <Route path="/" component={App}>
+//         <IndexRoute component={bookLanding} />
+//         <Route path="books" component={bookLanding} />
+//       </Route>
+//     </Router>
+//   </Provider>
+// )
 
 $(function() {
   ReactDOM.render(

@@ -2,7 +2,7 @@ import React from 'react';
 
 import BooklistContainer from '../components/booklist-container.js';
 
-export default class Landing extends React.Component {
+export default class BooksLanding extends React.Component {
   render() {
     return (
       <section className="l-mainContent mainContent">
