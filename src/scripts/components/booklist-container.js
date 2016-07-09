@@ -1,8 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
 
-import BooklistPanel from "./booklist-panel";
-import BooklistForm from "./booklist-form";
+import BooklistPanel from "../views/booklist-panel";
+import BooklistForm from "../views/booklist-form";
 
 export default class BooklistContainer extends React.Component {
   constructor() {

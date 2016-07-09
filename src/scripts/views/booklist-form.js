@@ -54,5 +54,4 @@ export default class BooklistForm extends React.Component {
     this._imageUrl.value = '';
     this._description.value = '';
   }
-
 }
