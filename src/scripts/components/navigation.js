@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class AppNavigation extends React.Component {
   render() {
@@ -7,9 +8,9 @@ export default class AppNavigation extends React.Component {
         <h1 className="logo"><a href="#">Athena</a></h1>
         <nav className="l-navlinks navlinks">
           <ul>
-            <li className="navlinks__item"><a href="#">Books</a></li>
-            <li className="navlinks__item"><a href="#">Authors</a></li>
-            <li className="navlinks__item"><a href="#">Clubs</a></li>
+            <li className="navlinks__item"><Link to="/books">Books</Link></li>
+            <li className="navlinks__item"><Link to="/authors">Authors</Link></li>
+            <li className="navlinks__item"><Link to="/clubs">Clubs</Link></li>
           </ul>
         </nav>
         <nav className="navActions">

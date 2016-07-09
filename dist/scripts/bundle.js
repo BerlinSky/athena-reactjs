@@ -35928,7 +35928,7 @@ var AppFooter = function (_React$Component) {
 exports.default = AppFooter;
 
 },{"react":230}],237:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -35936,9 +35936,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = require('react-router');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35958,77 +35960,77 @@ var AppNavigation = function (_React$Component) {
   }
 
   _createClass(AppNavigation, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "navigation",
-        { className: "l-navigation navigation" },
+        'navigation',
+        { className: 'l-navigation navigation' },
         _react2.default.createElement(
-          "h1",
-          { className: "logo" },
+          'h1',
+          { className: 'logo' },
           _react2.default.createElement(
-            "a",
-            { href: "#" },
-            "Athena"
+            'a',
+            { href: '#' },
+            'Athena'
           )
         ),
         _react2.default.createElement(
-          "nav",
-          { className: "l-navlinks navlinks" },
+          'nav',
+          { className: 'l-navlinks navlinks' },
           _react2.default.createElement(
-            "ul",
+            'ul',
             null,
             _react2.default.createElement(
-              "li",
-              { className: "navlinks__item" },
+              'li',
+              { className: 'navlinks__item' },
               _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Books"
+                _reactRouter.Link,
+                { to: '/books' },
+                'Books'
               )
             ),
             _react2.default.createElement(
-              "li",
-              { className: "navlinks__item" },
+              'li',
+              { className: 'navlinks__item' },
               _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Authors"
+                _reactRouter.Link,
+                { to: '/authors' },
+                'Authors'
               )
             ),
             _react2.default.createElement(
-              "li",
-              { className: "navlinks__item" },
+              'li',
+              { className: 'navlinks__item' },
               _react2.default.createElement(
-                "a",
-                { href: "#" },
-                "Clubs"
+                _reactRouter.Link,
+                { to: '/clubs' },
+                'Clubs'
               )
             )
           )
         ),
         _react2.default.createElement(
-          "nav",
-          { className: "navActions" },
+          'nav',
+          { className: 'navActions' },
           _react2.default.createElement(
-            "ul",
+            'ul',
             null,
             _react2.default.createElement(
-              "li",
-              { className: "navActions__item navActions__item__search visble" },
+              'li',
+              { className: 'navActions__item navActions__item__search visble' },
               _react2.default.createElement(
-                "a",
-                { className: "js-buttonSearchOpen fa-search", href: "#search" },
-                "Search"
+                'a',
+                { className: 'js-buttonSearchOpen fa-search', href: '#search' },
+                'Search'
               )
             ),
             _react2.default.createElement(
-              "li",
-              { className: "navActions__item menu" },
+              'li',
+              { className: 'navActions__item menu' },
               _react2.default.createElement(
-                "a",
-                { className: "js-actionMenu fa-bars" },
-                "Menu"
+                'a',
+                { className: 'js-actionMenu fa-bars' },
+                'Menu'
               )
             )
           )
@@ -36042,7 +36044,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":230}],238:[function(require,module,exports){
+},{"react":230,"react-router":82}],238:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36143,7 +36145,66 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 });
 
-},{"./router":241,"jquery":49,"react":230,"react-dom":52}],240:[function(require,module,exports){
+},{"./router":243,"jquery":49,"react":230,"react-dom":52}],240:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AuthorsLanding = function (_React$Component) {
+  _inherits(AuthorsLanding, _React$Component);
+
+  function AuthorsLanding() {
+    _classCallCheck(this, AuthorsLanding);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorsLanding).apply(this, arguments));
+  }
+
+  _createClass(AuthorsLanding, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { className: "l-mainContent mainContent" },
+        _react2.default.createElement(
+          "div",
+          { className: "siteAttraction" },
+          _react2.default.createElement(
+            "div",
+            { className: "siteCover" },
+            _react2.default.createElement(
+              "h1",
+              { className: "siteCover__caption" },
+              "Landing Page for Authors"
+            )
+          ),
+          _react2.default.createElement("video", { className: "siteShow", src: "./movies/In-And-Out.mp4", autoPlay: true, loop: true })
+        )
+      );
+    }
+  }]);
+
+  return AuthorsLanding;
+}(_react2.default.Component);
+
+exports.default = AuthorsLanding;
+
+},{"react":230}],241:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36207,7 +36268,66 @@ var BooksLanding = function (_React$Component) {
 
 exports.default = BooksLanding;
 
-},{"../components/booklist-container.js":233,"react":230}],241:[function(require,module,exports){
+},{"../components/booklist-container.js":233,"react":230}],242:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ClubsLanding = function (_React$Component) {
+  _inherits(ClubsLanding, _React$Component);
+
+  function ClubsLanding() {
+    _classCallCheck(this, ClubsLanding);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ClubsLanding).apply(this, arguments));
+  }
+
+  _createClass(ClubsLanding, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { className: "l-mainContent mainContent" },
+        _react2.default.createElement(
+          "div",
+          { className: "siteAttraction" },
+          _react2.default.createElement(
+            "div",
+            { className: "siteCover" },
+            _react2.default.createElement(
+              "h1",
+              { className: "siteCover__caption" },
+              "Landing Page for Clubs"
+            )
+          ),
+          _react2.default.createElement("video", { className: "siteShow", src: "./movies/In-And-Out.mp4", autoPlay: true, loop: true })
+        )
+      );
+    }
+  }]);
+
+  return ClubsLanding;
+}(_react2.default.Component);
+
+exports.default = ClubsLanding;
+
+},{"react":230}],243:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36228,6 +36348,14 @@ var _booksLanding = require('./pages/books-landing');
 
 var _booksLanding2 = _interopRequireDefault(_booksLanding);
 
+var _authorsLanding = require('./pages/authors-landing');
+
+var _authorsLanding2 = _interopRequireDefault(_authorsLanding);
+
+var _clubsLanding = require('./pages/clubs-landing');
+
+var _clubsLanding2 = _interopRequireDefault(_clubsLanding);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _react2.default.createElement(
@@ -36238,11 +36366,13 @@ var router = _react2.default.createElement(
     _reactRouter.Route,
     { path: '/', component: _layout2.default },
     _react2.default.createElement(_reactRouter.IndexRoute, { component: _booksLanding2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: 'books', component: _booksLanding2.default })
+    _react2.default.createElement(_reactRouter.Route, { path: 'books', component: _booksLanding2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'authors', component: _authorsLanding2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'clubs', component: _clubsLanding2.default })
   )
 );
 
 exports.default = router;
 
-},{"./layout/layout":238,"./pages/books-landing":240,"react":230,"react-router":82}]},{},[239])
+},{"./layout/layout":238,"./pages/authors-landing":240,"./pages/books-landing":241,"./pages/clubs-landing":242,"react":230,"react-router":82}]},{},[239])
 //# sourceMappingURL=bundle.js.map
