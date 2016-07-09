@@ -519,6 +519,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/scripts/pages/landing.js",
+			"settings":
+			{
+				"buffer_size": 608,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/pages/authors.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/pages/clubs.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -682,24 +706,33 @@
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/dist",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/base",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/layout",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/actions",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers"
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages"
 	],
 	"file_history":
 	[
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/layout/_all-layouts.scss",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules/_navigation.scss",
+		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/layout/_all-layouts.scss",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/main.scss",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/navigation.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/main.js",
+		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/modules/_navigation.scss",
+		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/index.html",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout/app.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/layout/layout.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/pages/landing.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/booklist-panel.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/main.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/gulpfile.babel.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers/index.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/reducers/booklist.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/layout/_all-layouts.scss",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/actions/action-creator.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/store.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/data/booklist.js",
@@ -715,7 +748,6 @@
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/components/comment-box.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/booklist-container.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules/_all-modules.scss",
-		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/index.html",
 		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/modules/_book-form.scss",
 		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/modules/_all-modules.scss",
 		"/Users/Scarecrow/Documents/5. Projects/athena-template/src/sass/modules/_media.scss",
@@ -724,7 +756,6 @@
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules/_media.scss",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/components/comment-avatar-list.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/footer.js",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/navigation.js",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/app.js",
 		"/Users/Scarecrow/Documents/5. Projects/WatchUsBuild-React/src/layout/layout.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/index.html",
@@ -814,11 +845,7 @@
 		"/Users/Scarecrow/Documents/5. Projects/SelectInspiration/index-origin.html",
 		"/Users/Scarecrow/Documents/5. Projects/SelectInspiration/css/cs-select.css",
 		"/Users/Scarecrow/Documents/5. Projects/SelectInspiration/js/selectFx.js",
-		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/C18BC21B-218B-473E-BAE4-34FD0AE0C1CF/gulpfile.babel.js",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/know-git.md",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/main.scss",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_all-modules.scss",
-		"/Users/Scarecrow/Documents/5. Projects/aphrodite/src/sass/modules/_brushed-metal.scss"
+		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/C18BC21B-218B-473E-BAE4-34FD0AE0C1CF/gulpfile.babel.js"
 	],
 	"find":
 	{
@@ -886,6 +913,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class",
+			"className",
 			"this",
 			"remove",
 			"removeBook",
@@ -1011,9 +1040,7 @@
 			"app/",
 			"app",
 			"appProd",
-			"Athena",
-			"padding",
-			"Berlin"
+			"Athena"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1155,8 +1182,319 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/scripts/pages/landing.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/scripts/pages/authors.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/scripts/pages/clubs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
