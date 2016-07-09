@@ -36137,27 +36137,6 @@ var _router2 = _interopRequireDefault(_router);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import { hashHistory, Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
-// import { Provider } from 'react-redux';
-
-// import store, { history } from './store';
-
-// import App from './layout/app';
-// import Layout from './layout/layout';
-// import bookLanding from './pages/books-landing';
-
-// const router = (
-//   <Provider store={store}>
-//     <Router history={history}>
-//       <Redirect from="/" to="/books" />
-//       <Route path="/" component={App}>
-//         <IndexRoute component={bookLanding} />
-//         <Route path="books" component={bookLanding} />
-//       </Route>
-//     </Router>
-//   </Provider>
-// )
-
 (0, _jquery2.default)(function () {
   _reactDom2.default.render(_router2.default, document.getElementById('react-app'), function () {
     console.timeEnd('react-app');
