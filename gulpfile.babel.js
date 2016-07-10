@@ -32,9 +32,20 @@ const config = {
 	}
 }
 
-watchify.args.debug = true;
+const appUrl = "http://localhost:3000/";
 
-const sync = browserSync.create({port: 10010, browser: "google chrome"});
+gulp.task('browser-sync', () => {
+  log('browser-sync watch proxy: '+ appUrl);
+  browserSync({
+    files: [
+      config.paths.dist + '/styles/*.css',
+      config.paths.dist + '/scripts/*.js',
+      config.paths.dist + '/**/*.html'
+    ],
+    browser: "google chrome",
+    proxy: appUrl
+  });
+});
 
 // Input file.
 watchify.args.debug = true;
@@ -96,19 +107,16 @@ gulp.task('sass', () => {
 	log('sass task ends');
 });
 
-gulp.task('serve', ['html', 'sass', 'transpile'], () => sync.init({ server: 'dist', browser: "google chrome" }))
-gulp.task('js-watch', ['transpile'], () => sync.reload());
-gulp.task('html-watch', ['html'], () => sync.reload());
-gulp.task('sass-watch', ['sass'], () => sync.reload());
+gulp.task('js-watch', ['transpile']);
+gulp.task('html-watch', ['html']);
+gulp.task('sass-watch', ['sass']);
 
-gulp.task('watch', ['serve'], () => {
+gulp.task('watch', ['html', 'sass', 'transpile'], () => {
   gulp.watch('src/*.html', ['html-watch'])
   gulp.watch(config.paths.sass, ['sass-watch'])
   gulp.watch('src/scripts/**/*.js', ['js-watch'])
   gulp.watch('src/scripts/**/*.jsx', ['js-watch'])
 })
-
-gulp.task('serveprod', () => sync.init({ server: 'dist' }));
 
 gulp.task('server', () => {
 	log('server task starts');
@@ -125,7 +133,7 @@ gulp.task('server', () => {
 	log('server task ends');
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'browser-sync']);
 
 ///////////
 function log(msg) {
