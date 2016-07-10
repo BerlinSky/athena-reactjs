@@ -13,8 +13,11 @@ import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import prefix from 'gulp-autoprefixer';
 import cssnano from 'gulp-cssnano';
-// var fontAwesome = require('node-font-awesome');
+
 import fontAwesome from 'node-font-awesome';
+
+import nodemon from 'gulp-nodemon';
+import path from 'path';
 
 import util from 'gulp-util';
 
@@ -106,6 +109,21 @@ gulp.task('watch', ['serve'], () => {
 })
 
 gulp.task('serveprod', () => sync.init({ server: 'dist' }));
+
+gulp.task('server', () => {
+	log('server task starts');
+
+  const babelPath = path.join(__dirname, 'node_modules/.bin/babel-node');
+
+  nodemon({
+    script: 'server/server.js',
+    exec: babelPath,
+    watch: ['server/server.js'],
+    ext: 'js html'
+  });
+
+	log('server task ends');
+});
 
 gulp.task('default', ['watch']);
 
