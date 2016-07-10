@@ -118,7 +118,19 @@ gulp.task('watch', ['html', 'sass', 'transpile'], () => {
   gulp.watch('src/scripts/**/*.jsx', ['js-watch'])
 })
 
-gulp.task('server', () => {
+gulp.task('setup-db', function() {
+  log('setup-db task starts');
+
+  const src = 'src/data/booklist.json';
+  const dist= 'dist/data';
+
+  gulp.src(src)
+    .pipe(gulp.dest(dist));
+
+  log('setup-db task ends');
+});
+
+gulp.task('server', ['setup-db'], () => {
 	log('server task starts');
 
   const babelPath = path.join(__dirname, 'node_modules/.bin/babel-node');
