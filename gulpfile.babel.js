@@ -16,6 +16,7 @@ import cssnano from 'gulp-cssnano';
 
 import fontAwesome from 'node-font-awesome';
 
+import cp from 'child_process';
 import nodemon from 'gulp-nodemon';
 import path from 'path';
 
@@ -43,7 +44,8 @@ gulp.task('browser-sync', () => {
       config.paths.dist + '/**/*.html'
     ],
     browser: "google chrome",
-    proxy: appUrl
+    proxy: appUrl,
+    port: 7000
   });
 });
 
@@ -121,7 +123,7 @@ gulp.task('watch', ['html', 'sass', 'transpile'], () => {
 gulp.task('setup-db', function() {
   log('setup-db task starts');
 
-  const src = 'src/data/booklist.json';
+  const src = 'src/data/athena.json';
   const dist= 'dist/data';
 
   gulp.src(src)
@@ -130,7 +132,16 @@ gulp.task('setup-db', function() {
   log('setup-db task ends');
 });
 
-gulp.task('server', ['setup-db'], () => {
+gulp.task('json-server', ['setup-db'], () => {
+  log('json-server task starts');
+
+  const serverPath = path.join(__dirname, 'node_modules/.bin/json-server');
+  cp.exec(serverPath + ' --watch ./dist/data/athena.json --port 3001', {stdio: 'inherit'});
+
+  log('json-server task ends');
+});
+
+gulp.task('server', ['json-server'], () => {
 	log('server task starts');
 
   const babelPath = path.join(__dirname, 'node_modules/.bin/babel-node');

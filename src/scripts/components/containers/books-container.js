@@ -4,6 +4,8 @@ import $ from 'jquery';
 import BooklistPanel from "../views/booklist-panel";
 import BooklistForm from "../views/booklist-form";
 
+import * as dataService from '../../services/booklist-service';
+
 export default class BooksContainer extends React.Component {
   constructor() {
     super();
@@ -20,7 +22,7 @@ export default class BooksContainer extends React.Component {
 
   componentWillMount() {
     this._fetchBooklist();
-  }
+  } 
 
   render() {
     const booklist = this._getBooklist();
@@ -44,14 +46,8 @@ export default class BooksContainer extends React.Component {
   }
 
   _fetchBooklist() {
-    $.ajax({
-      method: 'GET',
-      url: this.apiUrl,
-      success: (booklist) => {
-        this.setState({ booklist })
-
-      console.info('booklist', booklist.length);
-      }
+    dataService.getBooklist().then(booklist => {
+      this.setState({ booklist: booklist })
     });
   }
 
