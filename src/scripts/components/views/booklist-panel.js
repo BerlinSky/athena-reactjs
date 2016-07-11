@@ -27,8 +27,8 @@ export default class BooklistPanel extends React.Component {
 
   _handleRemove(e) {
     e.preventDefault();
-    // this.props.onRemove(this.props.id);
-    this.props.removeBook(this.props.id);
+    this.props.onRemove(this.props.id);
+    // this.props.removeBook(this.props.id);
   }
 
 }

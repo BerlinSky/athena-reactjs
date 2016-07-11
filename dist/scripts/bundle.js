@@ -36843,11 +36843,15 @@ var BooksContainer = function (_React$Component) {
   }, {
     key: '_removeBook',
     value: function _removeBook(bookId) {
-      var booklist = this.state.booklist.filter(function (book) {
-        return book.id !== bookId;
-      });
+      var _this4 = this;
 
-      this.setState({ booklist: booklist });
+      dataService.deleteBook(bookId).then(function () {
+        var booklist = _this4.state.booklist.filter(function (book) {
+          return book.id !== bookId;
+        });
+
+        _this4.setState({ booklist: booklist });
+      });
     }
   }, {
     key: '_addBook',
@@ -37562,8 +37566,8 @@ var BooklistPanel = function (_React$Component) {
     key: "_handleRemove",
     value: function _handleRemove(e) {
       e.preventDefault();
-      // this.props.onRemove(this.props.id);
-      this.props.removeBook(this.props.id);
+      this.props.onRemove(this.props.id);
+      // this.props.removeBook(this.props.id);
     }
   }]);
 
@@ -37676,6 +37680,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getBooklist = getBooklist;
+exports.deleteBook = deleteBook;
 
 var _axios = require('axios');
 
@@ -37687,6 +37692,10 @@ function getBooklist() {
   return _axios2.default.get('http://localhost:3001/booklist').then(function (response) {
     return response.data;
   });
+}
+
+function deleteBook(id) {
+  return _axios2.default.delete('http://localhost:3001/booklist/' + id);
 }
 
 },{"axios":1}]},{},[263])
