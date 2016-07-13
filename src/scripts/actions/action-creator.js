@@ -1,4 +1,4 @@
-export function addBook (id, title, author, imageUrl, description) {
+export function addBookAction(id, title, author, imageUrl, description) {
 	return {
 		type: 'ADD_BOOK',
 		id,
@@ -9,16 +9,16 @@ export function addBook (id, title, author, imageUrl, description) {
 	}
 }
 
-export function removeBook(id) {
+export function removeBookAction(id) {
 	return {
 		type: 'REMOVE_BOOK',
 		id
 	}
 }
 
-export function getBooklist(booklist) {
+export function getBooklistAction(booklist) {
 	return {
-		type: GET_BOOK_LIST,
+		type: 'GET_BOOK_LIST',
 		booklist
 	}
 }

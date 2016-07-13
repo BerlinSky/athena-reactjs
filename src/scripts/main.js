@@ -4,7 +4,6 @@ import $ from 'jquery';
 
 import router from "./router";
 
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -15,8 +14,6 @@ const provider = (
 );
 
 $(function() {
-  console.log('store: ', store.getState());
-
   ReactDOM.render(
     provider,
     document.getElementById('react-app'),

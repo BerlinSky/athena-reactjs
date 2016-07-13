@@ -38394,6 +38394,40 @@ module.exports = warning;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.addBookAction = addBookAction;
+exports.removeBookAction = removeBookAction;
+exports.getBooklistAction = getBooklistAction;
+function addBookAction(id, title, author, imageUrl, description) {
+	return {
+		type: 'ADD_BOOK',
+		id: id,
+		title: title,
+		author: author,
+		imageUrl: imageUrl,
+		description: description
+	};
+}
+
+function removeBookAction(id) {
+	return {
+		type: 'REMOVE_BOOK',
+		id: id
+	};
+}
+
+function getBooklistAction(booklist) {
+	return {
+		type: 'GET_BOOK_LIST',
+		booklist: booklist
+	};
+}
+
+},{}],278:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -38453,7 +38487,7 @@ var AuthorsContainer = function (_React$Component) {
 
 exports.default = AuthorsContainer;
 
-},{"jquery":68,"react":265}],278:[function(require,module,exports){
+},{"jquery":68,"react":265}],279:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38541,7 +38575,6 @@ var BooksContainer = function (_React$Component) {
     value: function _getBooklist() {
       var _this2 = this;
 
-      // return this.state.booklist.map((book) => {
       return this.props.booklist.map(function (book) {
         return _react2.default.createElement(_booklistPanel2.default, _extends({}, book, {
           onRemove: _this2._removeBook,
@@ -38551,17 +38584,7 @@ var BooksContainer = function (_React$Component) {
   }, {
     key: '_fetchBooklist',
     value: function _fetchBooklist() {
-      dataService.getBooklist().then(function (booklist) {
-        // this.setState({ booklist: booklist })
-        console.log('booklist', booklist);
-
-        _store2.default.dispatch({
-          type: 'GET_BOOK_LIST',
-          booklist: booklist
-        });
-
-        console.log('store', _store2.default);
-      });
+      dataService.getBooklist();
     }
   }, {
     key: '_removeBook',
@@ -38609,7 +38632,7 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BooksContainer);
 
-},{"../../services/booklist-service":292,"../../store":293,"../views/booklist-form":286,"../views/booklist-panel":287,"jquery":68,"react":265,"react-redux":78}],279:[function(require,module,exports){
+},{"../../services/booklist-service":293,"../../store":294,"../views/booklist-form":287,"../views/booklist-panel":288,"jquery":68,"react":265,"react-redux":78}],280:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38672,7 +38695,7 @@ var ClubsContainer = function (_React$Component) {
 
 exports.default = ClubsContainer;
 
-},{"jquery":68,"react":265}],280:[function(require,module,exports){
+},{"jquery":68,"react":265}],281:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38722,7 +38745,7 @@ var AppFooter = function (_React$Component) {
 
 exports.default = AppFooter;
 
-},{"react":265}],281:[function(require,module,exports){
+},{"react":265}],282:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38778,7 +38801,7 @@ var AuthorsLayout = function (_React$Component) {
 
 exports.default = AuthorsLayout;
 
-},{"../footer":280,"../navigation":285,"react":265,"react-router":117}],282:[function(require,module,exports){
+},{"../footer":281,"../navigation":286,"react":265,"react-router":117}],283:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38852,7 +38875,7 @@ var BooksLayout = function (_React$Component) {
 
 exports.default = BooksLayout;
 
-},{"../footer":280,"../navigation":285,"react":265,"react-router":117}],283:[function(require,module,exports){
+},{"../footer":281,"../navigation":286,"react":265,"react-router":117}],284:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38908,7 +38931,7 @@ var ClubsLayout = function (_React$Component) {
 
 exports.default = ClubsLayout;
 
-},{"../footer":280,"../navigation":285,"react":265,"react-router":117}],284:[function(require,module,exports){
+},{"../footer":281,"../navigation":286,"react":265,"react-router":117}],285:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38982,7 +39005,7 @@ var MainLayout = function (_React$Component) {
 
 exports.default = MainLayout;
 
-},{"../footer":280,"../navigation":285,"react":265,"react-router":117}],285:[function(require,module,exports){
+},{"../footer":281,"../navigation":286,"react":265,"react-router":117}],286:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39099,7 +39122,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":265,"react-router":117}],286:[function(require,module,exports){
+},{"react":265,"react-router":117}],287:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39218,7 +39241,7 @@ var BooklistForm = function (_React$Component) {
 
 exports.default = BooklistForm;
 
-},{"react":265}],287:[function(require,module,exports){
+},{"react":265}],288:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39303,7 +39326,7 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"react":265}],288:[function(require,module,exports){
+},{"react":265}],289:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -39322,8 +39345,6 @@ var _router = require('./router');
 
 var _router2 = _interopRequireDefault(_router);
 
-var _redux = require('redux');
-
 var _reactRedux = require('react-redux');
 
 var _store = require('./store');
@@ -39339,14 +39360,12 @@ var provider = _react2.default.createElement(
 );
 
 (0, _jquery2.default)(function () {
-  console.log('store: ', _store2.default.getState());
-
   _reactDom2.default.render(provider, document.getElementById('react-app'), function () {
     console.timeEnd('react-app');
   });
 });
 
-},{"./router":291,"./store":293,"jquery":68,"react":265,"react-dom":75,"react-redux":78,"redux":271}],289:[function(require,module,exports){
+},{"./router":292,"./store":294,"jquery":68,"react":265,"react-dom":75,"react-redux":78}],290:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39365,6 +39384,13 @@ function booklist() {
 	switch (action.type) {
 		case 'GET_BOOK_LIST':
 			return Object.assign({}, state, { booklist: action.booklist });
+
+		case 'REMOVE_BOOK':
+			return;
+
+		// Use lodash to create a new user array without the user we want to remove
+		// const newUsers = _.filter(state.users, user => user.id != action.userId);
+		// return Object.assign({}, state, { users: newUsers });
 	}
 
 	return state;
@@ -39372,7 +39398,7 @@ function booklist() {
 
 exports.default = booklist;
 
-},{}],290:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39396,7 +39422,7 @@ var rootReducer = (0, _redux.combineReducers)({
 
 exports.default = rootReducer;
 
-},{"./booklist":289,"react-router-redux":84,"redux":271}],291:[function(require,module,exports){
+},{"./booklist":290,"react-router-redux":84,"redux":271}],292:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39466,7 +39492,7 @@ var router = _react2.default.createElement(
 
 exports.default = router;
 
-},{"./components/containers/authors-container":277,"./components/containers/books-container":278,"./components/containers/clubs-container":279,"./components/layouts/authors-layout":281,"./components/layouts/books-layout":282,"./components/layouts/clubs-layout":283,"./components/layouts/main-layout":284,"react":265,"react-router":117}],292:[function(require,module,exports){
+},{"./components/containers/authors-container":278,"./components/containers/books-container":279,"./components/containers/clubs-container":280,"./components/layouts/authors-layout":282,"./components/layouts/books-layout":283,"./components/layouts/clubs-layout":284,"./components/layouts/main-layout":285,"react":265,"react-router":117}],293:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39479,11 +39505,20 @@ var _axios = require('axios');
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _store = require('../store');
+
+var _store2 = _interopRequireDefault(_store);
+
+var _actionCreator = require('../actions/action-creator');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getBooklist() {
-  return _axios2.default.get('http://localhost:3001/booklist').then(function (response) {
-    return response.data;
+  return _axios2.default.get('http://localhost:3001/booklist')
+  // .then(response => response.data);
+  .then(function (response) {
+    _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response.data));
+    return response;
   });
 }
 
@@ -39491,7 +39526,7 @@ function deleteBook(id) {
   return _axios2.default.delete('http://localhost:3001/booklist/' + id);
 }
 
-},{"axios":1}],293:[function(require,module,exports){
+},{"../actions/action-creator":277,"../store":294,"axios":1}],294:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39509,5 +39544,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_reducers2.default);
 exports.default = store;
 
-},{"./reducers":290,"redux":271}]},{},[288])
+},{"./reducers":291,"redux":271}]},{},[289])
 //# sourceMappingURL=bundle.js.map

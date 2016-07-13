@@ -39,7 +39,6 @@ export default class BooksContainer extends React.Component {
   }
 
   _getBooklist() {
-    // return this.state.booklist.map((book) => {
     return this.props.booklist.map((book) => {
       return <BooklistPanel
               {...book}
@@ -49,17 +48,7 @@ export default class BooksContainer extends React.Component {
   }
 
   _fetchBooklist() {
-    dataService.getBooklist().then(booklist => {
-      // this.setState({ booklist: booklist })
-      console.log('booklist', booklist);
-
-      store.dispatch({
-        type: 'GET_BOOK_LIST',
-        booklist: booklist
-      });
-
-      console.log('store', store);
-    });
+    dataService.getBooklist();
   }
 
   _removeBook(bookId) {
