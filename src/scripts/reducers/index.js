@@ -4,7 +4,7 @@ import { routerReducer } from 'react-router-redux';
 import booklist from './booklist';
 
 const rootReducer = combineReducers({ 
-	booklist,
+	booklistState: booklist,
 	routing: routerReducer
 })
 

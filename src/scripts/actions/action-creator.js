@@ -15,3 +15,10 @@ export function removeBook(id) {
 		id
 	}
 }
+
+export function getBooklist(booklist) {
+	return {
+		type: GET_BOOK_LIST,
+		booklist
+	}
+}

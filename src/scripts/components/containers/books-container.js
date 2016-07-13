@@ -4,6 +4,8 @@ import $ from 'jquery';
 import BooklistPanel from "../views/booklist-panel";
 import BooklistForm from "../views/booklist-form";
 
+import { connect } from 'react-redux';
+import store from '../../store';
 import * as dataService from '../../services/booklist-service';
 
 export default class BooksContainer extends React.Component {
@@ -37,7 +39,8 @@ export default class BooksContainer extends React.Component {
   }
 
   _getBooklist() {
-    return this.state.booklist.map((book) => {
+    // return this.state.booklist.map((book) => {
+    return this.props.booklist.map((book) => {
       return <BooklistPanel
               {...book}
               onRemove={this._removeBook}
@@ -47,7 +50,15 @@ export default class BooksContainer extends React.Component {
 
   _fetchBooklist() {
     dataService.getBooklist().then(booklist => {
-      this.setState({ booklist: booklist })
+      // this.setState({ booklist: booklist })
+      console.log('booklist', booklist);
+
+      store.dispatch({
+        type: 'GET_BOOK_LIST',
+        booklist: booklist
+      });
+
+      console.log('store', store);
     });
   }
 
@@ -79,6 +90,10 @@ export default class BooksContainer extends React.Component {
 
 }
 
-// BooksContainer.propTypes = {
-//   apiUrl: React.PropTypes.string.isRequired
-// }
+const mapStateToProps = function(store) {
+  return {
+    booklist: store.booklistState.booklist
+  };
+};
+
+export default connect(mapStateToProps)(BooksContainer);

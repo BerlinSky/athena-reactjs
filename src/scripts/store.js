@@ -1,17 +1,5 @@
-import { createStore, compse } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import { createStore } from 'redux';
+import reducers from './reducers';
 
-import rootReducer from './reducers/index';
-
-import booklist from './data/booklist';
-
-const defaultState = {
-	booklist
-};
-
-const store = createStore(rootReducer, defaultState);
-
-export const history = syncHistoryWithStore(browserHistory, store);
-
+const store = createStore(reducers);
 export default store;
