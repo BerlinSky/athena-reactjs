@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const initialState = {
   booklist: []
 }
@@ -10,11 +12,8 @@ function booklist(state = initialState, action) {
 			return Object.assign({}, state, { booklist: action.booklist });
 
 		case 'REMOVE_BOOK':
-			return;
-
-			// Use lodash to create a new user array without the user we want to remove
-      // const newUsers = _.filter(state.users, user => user.id != action.userId);
-      // return Object.assign({}, state, { users: newUsers });
+			const newBooklist = _.filter(state.booklist, book => book.id != action.id);
+			return Object.assign({}, state, { booklist: newBooklist });
 	}
 
 	return state;

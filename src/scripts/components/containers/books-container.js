@@ -52,13 +52,14 @@ export default class BooksContainer extends React.Component {
   }
 
   _removeBook(bookId) {
-    dataService.deleteBook(bookId).then(() => {
-      const booklist = this.state.booklist.filter (
-        book => book.id !== bookId
-      );
+    dataService.deleteBook(bookId);
+    // dataService.deleteBook(bookId).then(() => {
+    //   const booklist = this.state.booklist.filter (
+    //     book => book.id !== bookId
+    //   );
 
-      this.setState({ booklist: booklist })
-    });
+    //   this.setState({ booklist: booklist })
+    // });
   }
 
   _addBook(title, author, description, imageUrl) {

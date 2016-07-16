@@ -4,16 +4,64 @@
 		"selected_items":
 		[
 			[
-				"get",
-				"getState"
+				"remove",
+				"removeBookAction"
 			],
 			[
-				"remove",
-				"removeBook	(booklist-panel.js)"
+				"new",
+				"newBooklist"
+			],
+			[
+				"remo",
+				"removeBookAction	(action-creator.js)"
+			],
+			[
+				"ac",
+				"actions/"
+			],
+			[
+				"rea",
+				"react-redux	(user-list-container.js)"
+			],
+			[
+				"Book",
+				"BooksContainer"
 			],
 			[
 				"map",
-				"mapDispatchToProps"
+				"mapStateToProps"
+			],
+			[
+				"boo",
+				"booklist"
+			],
+			[
+				"GET",
+				"GET_BOOK_LIST	(booklist.js)"
+			],
+			[
+				"s",
+				"store.js"
+			],
+			[
+				"redu",
+				"reducers/"
+			],
+			[
+				"read",
+				"react-redux	(index.js)"
+			],
+			[
+				"app",
+				"applyMiddleware"
+			],
+			[
+				"jso",
+				"json-server"
+			],
+			[
+				"get",
+				"getState"
 			],
 			[
 				"la",
@@ -60,24 +108,12 @@
 				"title	(booklist.json)"
 			],
 			[
-				"Book",
-				"BooklistPanel"
-			],
-			[
-				"boo",
-				"booklist"
-			],
-			[
 				"Bo",
 				"BooklistPanel"
 			],
 			[
 				"con",
 				"container"
-			],
-			[
-				"ac",
-				"account-manager.js"
 			],
 			[
 				"account",
@@ -130,10 +166,6 @@
 			[
 				"par",
 				"parentHeight"
-			],
-			[
-				"new",
-				"newsContent"
 			],
 			[
 				"play",
@@ -274,10 +306,6 @@
 			[
 				"ve",
 				"vendors/"
-			],
-			[
-				"s",
-				"styles/"
 			],
 			[
 				"libra",
@@ -486,39 +514,75 @@
 			[
 				"au",
 				"authorPage.js"
-			],
-			[
-				"Au",
-				"AuthorList"
-			],
-			[
-				"cre",
-				"createAuthorRow"
-			],
-			[
-				"Auth",
-				"AuthorApi"
-			],
-			[
-				"cl",
-				"className	Element"
-			],
-			[
-				"getEle",
-				"getElementById(${0:id})	Element"
-			],
-			[
-				"ren",
-				"render	(homePage.js)"
-			],
-			[
-				"reac",
-				"react	(homePage.js)"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/scripts/actions/action-creator.js",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/reducers/booklist.js",
+			"settings":
+			{
+				"buffer_size": 471,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/reducers/user-reducer.js",
+			"settings":
+			{
+				"buffer_size": 763,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/components/containers/books-container.js",
+			"settings":
+			{
+				"buffer_size": 1901,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scripts/services/booklist-service.js",
+			"settings":
+			{
+				"buffer_size": 602,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/components/containers/user-list-container.js",
+			"settings":
+			{
+				"buffer_size": 720,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/api/user-api.js",
+			"settings":
+			{
+				"buffer_size": 2053,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -679,36 +743,75 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/dist",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/dist/data",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/layout",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/sass/modules",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/actions",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/containers",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/layouts",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/views",
-		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/server",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-1-react-router/app",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-1-react-router/app/components",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components/app",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components/app/api",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components/app/components",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components/app/components/containers",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-2-container-components/app/components/layouts",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app/actions",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app/components",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app/components/containers",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app/components/layouts",
-		"/Users/Scarecrow/Documents/5. Projects/react-brad/guide-3-redux/app/reducers"
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/dist",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/dist/data",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/node_modules/.bin",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/sass",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/actions",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/containers",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/layouts",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/reducers",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/services",
+		"/Users/Scarecrow/Documents/5-projects/react-brad",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/api",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/components",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/components/containers",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/components/layouts",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/components/views",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/data",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/actions",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/api",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/components",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/components/containers",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/reducers",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/actions",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/components",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/components/signup",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/data",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/server",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/server/routes",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/server/shared",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/server/shared/validations"
 	],
 	"file_history":
 	[
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/gulpfile.babel.js",
+		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/7EFDF892-1147-4484-A5C4-7CA58E36254B/gulpfile.babel.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/sass/main.scss",
+		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/AE3069E0-D5B0-4B2A-BB1F-5FA6695CD2BE/gulpfile.babel.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/reducers/index.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/reducers/user-reducer.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/store.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/components/containers/user-list-container.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/reducers/booklist.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/store.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/actions/action-creator.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/main.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/containers/books-container.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/actions/getbooklist-action.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/services/booklist-service.js",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/index.js",
+		"/Users/Scarecrow/Documents/5-projects/redux-dice/client/actions/signupActions.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/router.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/layouts/books-layout.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/views/booklist-panel.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/scripts/components/footer.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/gulpfile.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/components/containers/user-list-container.js",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/server.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/server/server.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/data/athena.json",
+		"/Users/Scarecrow/Documents/5-projects/react-brad/guide-2-container-components/app/api/user-api.js",
+		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/0F5D832F-D8DA-4836-98C8-72927B23A2F6/gulpfile.babel.js",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/src/index.html",
+		"/Users/Scarecrow/Documents/5-projects/athena-reactjs/server.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/containers/authors-container.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/components/containers/clubs-container.js",
 		"/Users/Scarecrow/Documents/5. Projects/athena-reactjs/src/scripts/router.js",
@@ -806,41 +909,11 @@
 		"/Users/Scarecrow/Documents/5. Projects/artemis/src/tso-landing-m.html",
 		"/Users/Scarecrow/Library/Caches/Cleanup At Startup/Transmit/E16839D0-A964-4F3E-AEED-37405E80C084/_all-base.scss",
 		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/main.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/search.scss",
-		"/Users/Scarecrow/Documents/5. Projects/search-inspiration/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_site-container.scss",
-		"/Users/Scarecrow/Documents/5. Projects/search-inspiration/css/component.css",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/dist/data/contact-list.json",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/scripts/ajax/ajaxmini.js",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_site-show.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_site-cover.scss",
-		"/Users/Scarecrow/Documents/5. Projects/learning-flexbox/flexbox-nav/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/learning-flexbox/flexbox-form/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/learning-flexbox/flexbox-form/style-ANSWER.css",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/base/_media-queries.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/layout/_all-layouts.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/base/_all-tests.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_main-content.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_footer.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/base/_all-base.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_navigation.scss",
-		"/Users/Scarecrow/Documents/5. Projects/learning-flexbox/flexbox-app-layout/style-ANSWER.css",
-		"/Users/Scarecrow/Documents/5. Projects/learning-flexbox/flexbox-app-layout/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/base/_site-base.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/dist/index.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/flexbox-fixed-footer.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/dist/flexbox-sticky-footer.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/dist/flexbox-fixed-footer.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/base/_variables.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/flexbox-layout-fixed-hf.html",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/flexbox-layout-fixed-hf.scss",
-		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/_menu.scss",
-		"/Users/Scarecrow/Documents/5. Projects/html5up-future-imperfect/single.html",
-		"/Users/Scarecrow/Documents/5. Projects/html5up-future-imperfect/assets/sass/layout/_header.scss"
+		"/Users/Scarecrow/Documents/5. Projects/artemis/src/sass/modules/search.scss"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -904,6 +977,60 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getBooklist",
+			"getBooklistAction",
+			"getBooklist",
+			"initialState",
+			"users",
+			"booklist",
+			"this",
+			"store",
+			"booklist",
+			"store",
+			"booklist",
+			"SignupPage",
+			"BooksContainer",
+			"userSignupRequest",
+			"getBooklistRequest",
+			"getBooklist",
+			"getBooklistRequest",
+			"booklist",
+			"getBooklistRequest",
+			"apiUrl",
+			"getBooklistRequest",
+			"booklist",
+			"getBooklistRequest",
+			"router",
+			"provider",
+			"bookId",
+			"id",
+			"bookId",
+			"user",
+			"User",
+			"siteCover",
+			"users",
+			"booklist",
+			"componentWillMount",
+			"componentDidMount",
+			"booklist",
+			"const dist = path.join(__dirname, '../dist');\n  console.log('dist', dist);",
+			"webpack",
+			"booklist",
+			"athena",
+			"componentWillMount",
+			"componentDidMount",
+			"webpack",
+			"booklist",
+			"dataService",
+			"userApi",
+			"users",
+			"child",
+			"db",
+			"restore",
+			"server",
+			"target",
+			"__dirname",
+			"dist",
 			"apiUrl",
 			"BooklistContainer",
 			"BooksContainer",
@@ -977,61 +1104,7 @@
 			"class",
 			"_addComment",
 			"buttonPanel",
-			"right",
-			"Description",
-			"buttonPanel",
-			"formContainer",
-			"media__button",
-			"center",
-			"lightblue",
-			"border-radius",
-			"yellgow",
-			"p",
-			"P",
-			"p",
-			"bookForm",
-			"actionForm",
-			"bookForm",
-			"_handleRemove",
-			"__handleRemove",
-			"_handleRemove",
-			"_removeBook",
-			"this",
-			"_deleteComment",
-			"comment",
-			"comments",
-			"booklist",
-			"comments",
-			"commentID",
-			"media",
-			"a",
-			"BooklistPanel",
-			"_getBooklist",
-			"comments",
-			"_getComments",
-			"comments",
-			"_fetchComments",
-			"jQuery",
-			"imagerl",
-			"George",
-			"body",
-			"AppNavigation",
-			"navigation",
-			"AppNavigation",
-			"Navigation",
-			"AppNavigation",
-			"Navigation",
-			"Landing",
-			"jQuery",
-			"class=",
-			"class",
-			"landing",
-			"Layout",
-			"layout",
-			"Layout",
-			"react",
-			"magnifier",
-			"h6"
+			"right"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1173,8 +1246,920 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/scripts/actions/action-creator.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/scripts/reducers/booklist.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								471,
+								471
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/reducers/user-reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								730,
+								730
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										732,
+										733
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										209,
+										210
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/scripts/components/containers/books-container.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1328,
+								1328
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1390,
+										1391
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1135,
+										1136
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 730.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/scripts/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/scripts/services/booklist-service.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										601,
+										602
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										405,
+										406
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/components/containers/user-list-container.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								563,
+								563
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/Scarecrow/Documents/5-projects/react-brad/guide-3-redux/app/api/user-api.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								182
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										370,
+										371
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										209,
+										210
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JSX/JSX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1238,6 +2223,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"book",
+				"athena-reactjs/src/scripts/components/containers/books-container.js"
+			],
 			[
 				"navig",
 				"athena-reactjs/src/scripts/components/navigation.js"
@@ -1539,7 +2528,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 267.0,
+	"side_bar_width": 237.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
