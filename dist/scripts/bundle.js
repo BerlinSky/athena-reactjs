@@ -54834,7 +54834,7 @@ function getBooklistAction(booklist) {
 }
 
 },{}],279:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -54842,13 +54842,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54868,24 +54864,102 @@ var AuthorsContainer = function (_React$Component) {
   }
 
   _createClass(AuthorsContainer, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'section',
-        { className: 'l-mainContent mainContent' },
+        "section",
+        { className: "l-mainContent mainContent" },
         _react2.default.createElement(
-          'div',
-          { className: 'siteAttraction' },
+          "div",
+          { className: "slideContainer" },
           _react2.default.createElement(
-            'div',
-            { className: 'siteCover' },
+            "div",
+            { className: "slides" },
             _react2.default.createElement(
-              'h1',
-              { className: 'siteCover__caption' },
-              'Landing Page for Authors'
+              "div",
+              { className: "slideShowTitle" },
+              "ENJOY THE SHOW"
+            ),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-1", name: "slide", "aria-hidden": "true", hidden: "", checked: "checked" }),
+            _react2.default.createElement(
+              "div",
+              { className: "slide" },
+              _react2.default.createElement("img", { src: "./images/box-01.jpg" })
+            ),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-2", name: "slide", "aria-hidden": "true", hidden: "" }),
+            _react2.default.createElement(
+              "div",
+              { className: "slide" },
+              _react2.default.createElement("img", { src: "./images/box-02.jpg" })
+            ),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-3", name: "slide", "aria-hidden": "true", hidden: "" }),
+            _react2.default.createElement(
+              "div",
+              { className: "slide" },
+              _react2.default.createElement("img", { src: "./images/box-03.jpg" })
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-3", className: "slides__navigator slides__navigator--prev nav-1" },
+              "‹"
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-2", className: "slides__navigator slides__navigator--next nav-1" },
+              "›"
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-1", className: "slides__navigator slides__navigator--prev nav-2" },
+              "‹"
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-3", className: "slides__navigator slides__navigator--next nav-2" },
+              "›"
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-2", className: "slides__navigator slides__navigator--prev nav-3" },
+              "‹"
+            ),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "slide-1", className: "slides__navigator slides__navigator--next nav-3" },
+              "›"
+            ),
+            _react2.default.createElement(
+              "ol",
+              { className: "slides__indicators" },
+              _react2.default.createElement(
+                "li",
+                null,
+                _react2.default.createElement(
+                  "label",
+                  { htmlFor: "slide-1", className: "slides__pointer" },
+                  "•"
+                )
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                _react2.default.createElement(
+                  "label",
+                  { htmlFor: "slide-2", className: "slides__pointer" },
+                  "•"
+                )
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                _react2.default.createElement(
+                  "label",
+                  { htmlFor: "slide-3", className: "slides__pointer" },
+                  "•"
+                )
+              )
             )
-          ),
-          _react2.default.createElement('video', { className: 'siteShow', src: './movies/In-And-Out.mp4', autoPlay: true, loop: true })
+          )
         )
       );
     }
@@ -54896,8 +54970,8 @@ var AuthorsContainer = function (_React$Component) {
 
 exports.default = AuthorsContainer;
 
-},{"jquery":68,"react":266}],280:[function(require,module,exports){
-'use strict';
+},{"react":266}],280:[function(require,module,exports){
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -54907,29 +54981,25 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _booklistPanel = require('../views/booklist-panel');
+var _booklistPanel = require("../views/booklist-panel");
 
 var _booklistPanel2 = _interopRequireDefault(_booklistPanel);
 
-var _booklistForm = require('../views/booklist-form');
+var _booklistForm = require("../views/booklist-form");
 
 var _booklistForm2 = _interopRequireDefault(_booklistForm);
 
-var _reactRedux = require('react-redux');
+var _reactRedux = require("react-redux");
 
-var _store = require('../../store');
+var _store = require("../../store");
 
 var _store2 = _interopRequireDefault(_store);
 
-var _booklistService = require('../../services/booklist-service');
+var _booklistService = require("../../services/booklist-service");
 
 var dataService = _interopRequireWildcard(_booklistService);
 
@@ -54963,24 +55033,24 @@ var BooksContainer = function (_React$Component) {
   }
 
   _createClass(BooksContainer, [{
-    key: 'componentWillMount',
+    key: "componentWillMount",
     value: function componentWillMount() {
       this._fetchBooklist();
     }
   }, {
-    key: 'render',
+    key: "render",
     value: function render() {
       var booklist = this._getBooklist();
 
       return _react2.default.createElement(
-        'div',
-        { className: 'panelContainer' },
+        "div",
+        { className: "panelContainer" },
         _react2.default.createElement(_booklistForm2.default, { addBook: this._addBook }),
         booklist
       );
     }
   }, {
-    key: '_getBooklist',
+    key: "_getBooklist",
     value: function _getBooklist() {
       var _this2 = this;
 
@@ -54991,12 +55061,12 @@ var BooksContainer = function (_React$Component) {
       });
     }
   }, {
-    key: '_fetchBooklist',
+    key: "_fetchBooklist",
     value: function _fetchBooklist() {
       dataService.getBooklist();
     }
   }, {
-    key: '_removeBook',
+    key: "_removeBook",
     value: function _removeBook(bookId) {
       dataService.deleteBook(bookId);
       // dataService.deleteBook(bookId).then(() => {
@@ -55008,7 +55078,7 @@ var BooksContainer = function (_React$Component) {
       // });
     }
   }, {
-    key: '_addBook',
+    key: "_addBook",
     value: function _addBook(title, author, description, imageUrl) {
       console.log('imageUrl', imageUrl);
 
@@ -55040,8 +55110,8 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BooksContainer);
 
-},{"../../services/booklist-service":294,"../../store":295,"../views/booklist-form":288,"../views/booklist-panel":289,"jquery":68,"react":266,"react-redux":79}],281:[function(require,module,exports){
-'use strict';
+},{"../../services/booklist-service":295,"../../store":296,"../views/booklist-form":289,"../views/booklist-panel":290,"react":266,"react-redux":79}],281:[function(require,module,exports){
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -55049,13 +55119,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55075,24 +55141,24 @@ var ClubsContainer = function (_React$Component) {
   }
 
   _createClass(ClubsContainer, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'section',
-        { className: 'l-mainContent mainContent' },
+        "section",
+        { className: "l-mainContent mainContent" },
         _react2.default.createElement(
-          'div',
-          { className: 'siteAttraction' },
+          "div",
+          { className: "siteAttraction" },
           _react2.default.createElement(
-            'div',
-            { className: 'siteCover' },
+            "div",
+            { className: "siteCover" },
             _react2.default.createElement(
-              'h1',
-              { className: 'siteCover__caption' },
-              'Landing Page for Clubs'
+              "h1",
+              { className: "siteCover__caption" },
+              "Landing Page for Clubs"
             )
           ),
-          _react2.default.createElement('video', { className: 'siteShow', src: './movies/In-And-Out.mp4', autoPlay: true, loop: true })
+          _react2.default.createElement("video", { className: "siteShow", src: "./movies/In-And-Out.mp4", autoPlay: true, loop: true })
         )
       );
     }
@@ -55103,7 +55169,7 @@ var ClubsContainer = function (_React$Component) {
 
 exports.default = ClubsContainer;
 
-},{"jquery":68,"react":266}],282:[function(require,module,exports){
+},{"react":266}],282:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55154,7 +55220,7 @@ var AppFooter = function (_React$Component) {
 exports.default = AppFooter;
 
 },{"react":266}],283:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -55162,19 +55228,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = require('react-router');
-
-var _navigation = require('../navigation');
-
-var _navigation2 = _interopRequireDefault(_navigation);
-
-var _footer = require('../footer');
-
-var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55194,11 +55250,11 @@ var AuthorsLayout = function (_React$Component) {
   }
 
   _createClass(AuthorsLayout, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'l-siteContainer l-header-fixed l-footer-fixed siteContainer' },
+        "div",
+        { className: "l-siteContainer l-header-fixed l-footer-fixed siteContainer" },
         this.props.children
       );
     }
@@ -55209,8 +55265,8 @@ var AuthorsLayout = function (_React$Component) {
 
 exports.default = AuthorsLayout;
 
-},{"../footer":282,"../navigation":287,"react":266,"react-router":118}],284:[function(require,module,exports){
-'use strict';
+},{"react":266}],284:[function(require,module,exports){
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -55218,19 +55274,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = require('react-router');
-
-var _navigation = require('../navigation');
-
-var _navigation2 = _interopRequireDefault(_navigation);
-
-var _footer = require('../footer');
-
-var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55250,27 +55296,27 @@ var BooksLayout = function (_React$Component) {
   }
 
   _createClass(BooksLayout, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'l-siteContainer l-header-fixed l-footer-fixed siteContainer' },
+        "div",
+        { className: "l-siteContainer l-header-fixed l-footer-fixed siteContainer" },
         _react2.default.createElement(
-          'section',
-          { className: 'l-mainContent mainContent' },
+          "section",
+          { className: "l-mainContent mainContent" },
           _react2.default.createElement(
-            'div',
-            { className: 'siteAttraction' },
+            "div",
+            { className: "siteAttraction" },
             _react2.default.createElement(
-              'div',
-              { className: 'siteCover' },
+              "div",
+              { className: "siteCover" },
               _react2.default.createElement(
-                'h1',
-                { className: 'siteCover__caption' },
-                'Bustling Daily Life in reading'
+                "h1",
+                { className: "siteCover__caption" },
+                "Bustling Daily Life in reading"
               )
             ),
-            _react2.default.createElement('video', { className: 'siteShow', src: './movies/In-And-Out.mp4', autoPlay: true, loop: true })
+            _react2.default.createElement("video", { className: "siteShow", src: "./movies/In-And-Out.mp4", autoPlay: true, loop: true })
           ),
           this.props.children
         )
@@ -55283,8 +55329,8 @@ var BooksLayout = function (_React$Component) {
 
 exports.default = BooksLayout;
 
-},{"../footer":282,"../navigation":287,"react":266,"react-router":118}],285:[function(require,module,exports){
-'use strict';
+},{"react":266}],285:[function(require,module,exports){
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -55292,19 +55338,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = require('react-router');
-
-var _navigation = require('../navigation');
-
-var _navigation2 = _interopRequireDefault(_navigation);
-
-var _footer = require('../footer');
-
-var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55324,11 +55360,11 @@ var ClubsLayout = function (_React$Component) {
   }
 
   _createClass(ClubsLayout, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'l-siteContainer l-header-fixed l-footer-fixed siteContainer' },
+        "div",
+        { className: "l-siteContainer l-header-fixed l-footer-fixed siteContainer" },
         this.props.children
       );
     }
@@ -55339,7 +55375,7 @@ var ClubsLayout = function (_React$Component) {
 
 exports.default = ClubsLayout;
 
-},{"../footer":282,"../navigation":287,"react":266,"react-router":118}],286:[function(require,module,exports){
+},{"react":266}],286:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55351,8 +55387,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = require('react-router');
 
 var _navigation = require('../navigation');
 
@@ -55413,7 +55447,53 @@ var MainLayout = function (_React$Component) {
 
 exports.default = MainLayout;
 
-},{"../footer":282,"../navigation":287,"react":266,"react-router":118}],287:[function(require,module,exports){
+},{"../footer":282,"../navigation":288,"react":266}],287:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SearchLayout = function (_React$Component) {
+  _inherits(SearchLayout, _React$Component);
+
+  function SearchLayout() {
+    _classCallCheck(this, SearchLayout);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(SearchLayout).apply(this, arguments));
+  }
+
+  _createClass(SearchLayout, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "l-siteContainer l-header-fixed l-footer-fixed siteContainer" },
+        this.props.children
+      );
+    }
+  }]);
+
+  return SearchLayout;
+}(_react2.default.Component);
+
+exports.default = SearchLayout;
+
+},{"react":266}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55505,8 +55585,8 @@ var AppNavigation = function (_React$Component) {
               'li',
               { className: 'navActions__item navActions__item__search visble' },
               _react2.default.createElement(
-                'a',
-                { className: 'js-buttonSearchOpen fa-search', href: '#search' },
+                _reactRouter.Link,
+                { className: 'js-buttonSearchOpen fa-search', to: '/search' },
                 'Search'
               )
             ),
@@ -55530,7 +55610,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":266,"react-router":118}],288:[function(require,module,exports){
+},{"react":266,"react-router":118}],289:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55649,7 +55729,7 @@ var BooklistForm = function (_React$Component) {
 
 exports.default = BooklistForm;
 
-},{"react":266}],289:[function(require,module,exports){
+},{"react":266}],290:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55734,7 +55814,7 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"react":266}],290:[function(require,module,exports){
+},{"react":266}],291:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -55773,7 +55853,7 @@ var provider = _react2.default.createElement(
   });
 });
 
-},{"./router":293,"./store":295,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],291:[function(require,module,exports){
+},{"./router":294,"./store":296,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],292:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55812,7 +55892,7 @@ function booklist() {
 
 exports.default = booklist;
 
-},{"lodash":73}],292:[function(require,module,exports){
+},{"lodash":73}],293:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55836,7 +55916,7 @@ var rootReducer = (0, _redux.combineReducers)({
 
 exports.default = rootReducer;
 
-},{"./booklist":291,"react-router-redux":85,"redux":272}],293:[function(require,module,exports){
+},{"./booklist":292,"react-router-redux":85,"redux":272}],294:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55856,6 +55936,10 @@ var _mainLayout2 = _interopRequireDefault(_mainLayout);
 var _booksLayout = require('./components/layouts/books-layout');
 
 var _booksLayout2 = _interopRequireDefault(_booksLayout);
+
+var _searchLayout = require('./components/layouts/search-layout');
+
+var _searchLayout2 = _interopRequireDefault(_searchLayout);
 
 var _authorsLayout = require('./components/layouts/authors-layout');
 
@@ -55893,6 +55977,11 @@ var router = _react2.default.createElement(
 						),
 						_react2.default.createElement(
 									_reactRouter.Route,
+									{ path: 'search', component: _searchLayout2.default },
+									_react2.default.createElement(_reactRouter.IndexRoute, { component: _booksContainer2.default })
+						),
+						_react2.default.createElement(
+									_reactRouter.Route,
 									{ path: 'authors', component: _authorsLayout2.default },
 									_react2.default.createElement(_reactRouter.IndexRoute, { component: _authorsContainer2.default })
 						),
@@ -55906,7 +55995,7 @@ var router = _react2.default.createElement(
 
 exports.default = router;
 
-},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/layouts/authors-layout":283,"./components/layouts/books-layout":284,"./components/layouts/clubs-layout":285,"./components/layouts/main-layout":286,"react":266,"react-router":118}],294:[function(require,module,exports){
+},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/layouts/authors-layout":283,"./components/layouts/books-layout":284,"./components/layouts/clubs-layout":285,"./components/layouts/main-layout":286,"./components/layouts/search-layout":287,"react":266,"react-router":118}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55943,7 +56032,7 @@ function deleteBook(id) {
   });
 }
 
-},{"../actions/action-creator":278,"../store":295,"axios":1}],295:[function(require,module,exports){
+},{"../actions/action-creator":278,"../store":296,"axios":1}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55961,5 +56050,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_reducers2.default);
 exports.default = store;
 
-},{"./reducers":292,"redux":272}]},{},[290])
+},{"./reducers":293,"redux":272}]},{},[291])
 //# sourceMappingURL=bundle.js.map

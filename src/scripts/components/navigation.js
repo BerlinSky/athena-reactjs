@@ -16,7 +16,7 @@ export default class AppNavigation extends React.Component {
         <nav className="navActions">
           <ul>
             <li className="navActions__item navActions__item__search visble">
-              <a className="js-buttonSearchOpen fa-search" href="#search">Search</a>
+              <Link className="js-buttonSearchOpen fa-search" to="/search">Search</Link>
             </li>
             <li className="navActions__item menu">
               <a className="js-actionMenu fa-bars">Menu</a>

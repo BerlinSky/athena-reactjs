@@ -1,8 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
-
-import AppNavigation from '../navigation';
-import AppFooter from '../footer';
 
 export default class AuthorsLayout extends React.Component {
   render() {

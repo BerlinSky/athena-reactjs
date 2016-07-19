@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 import BooklistPanel from "../views/booklist-panel";
 import BooklistForm from "../views/booklist-form";

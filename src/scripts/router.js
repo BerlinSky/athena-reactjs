@@ -1,9 +1,10 @@
 import React from 'react';
-import { hashHistory, Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
+import { Router, IndexRoute, Route, Redirect, browserHistory } from 'react-router';
 
 import mainLayout from './components/layouts/main-layout';
 
 import booksLayout from './components/layouts/books-layout';
+import searchLayout from './components/layouts/search-layout';
 import authorsLayout from './components/layouts/authors-layout';
 import clubsLayout from './components/layouts/clubs-layout';
 
@@ -17,6 +18,10 @@ const router = (
     
     <Route path="/" component={mainLayout}>
 	    <Route path="books" component={booksLayout}>
+				<IndexRoute component={booksContainer} />
+	    </Route> 
+
+	    <Route path="search" component={searchLayout}>
 				<IndexRoute component={booksContainer} />
 	    </Route> 
 

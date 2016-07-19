@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 export default class ClubsContainer extends React.Component {
   render() {
