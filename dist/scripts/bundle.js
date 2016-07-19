@@ -55110,7 +55110,7 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BooksContainer);
 
-},{"../../services/booklist-service":295,"../../store":296,"../views/booklist-form":289,"../views/booklist-panel":290,"react":266,"react-redux":79}],281:[function(require,module,exports){
+},{"../../services/booklist-service":297,"../../store":298,"../views/booklist-form":290,"../views/booklist-panel":291,"react":266,"react-redux":79}],281:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55170,6 +55170,56 @@ var ClubsContainer = function (_React$Component) {
 exports.default = ClubsContainer;
 
 },{"react":266}],282:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _searchPanel = require('../views/search-panel');
+
+var _searchPanel2 = _interopRequireDefault(_searchPanel);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AuthorsContainer = function (_React$Component) {
+  _inherits(AuthorsContainer, _React$Component);
+
+  function AuthorsContainer() {
+    _classCallCheck(this, AuthorsContainer);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorsContainer).apply(this, arguments));
+  }
+
+  _createClass(AuthorsContainer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'section',
+        { className: 'l-mainContent mainContent' },
+        _react2.default.createElement(_searchPanel2.default, null)
+      );
+    }
+  }]);
+
+  return AuthorsContainer;
+}(_react2.default.Component);
+
+exports.default = AuthorsContainer;
+
+},{"../views/search-panel":292,"react":266}],283:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55219,7 +55269,7 @@ var AppFooter = function (_React$Component) {
 
 exports.default = AppFooter;
 
-},{"react":266}],283:[function(require,module,exports){
+},{"react":266}],284:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55265,7 +55315,7 @@ var AuthorsLayout = function (_React$Component) {
 
 exports.default = AuthorsLayout;
 
-},{"react":266}],284:[function(require,module,exports){
+},{"react":266}],285:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55329,7 +55379,7 @@ var BooksLayout = function (_React$Component) {
 
 exports.default = BooksLayout;
 
-},{"react":266}],285:[function(require,module,exports){
+},{"react":266}],286:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55375,7 +55425,7 @@ var ClubsLayout = function (_React$Component) {
 
 exports.default = ClubsLayout;
 
-},{"react":266}],286:[function(require,module,exports){
+},{"react":266}],287:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55447,7 +55497,7 @@ var MainLayout = function (_React$Component) {
 
 exports.default = MainLayout;
 
-},{"../footer":282,"../navigation":288,"react":266}],287:[function(require,module,exports){
+},{"../footer":283,"../navigation":289,"react":266}],288:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55493,7 +55543,7 @@ var SearchLayout = function (_React$Component) {
 
 exports.default = SearchLayout;
 
-},{"react":266}],288:[function(require,module,exports){
+},{"react":266}],289:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55610,7 +55660,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":266,"react-router":118}],289:[function(require,module,exports){
+},{"react":266,"react-router":118}],290:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55729,7 +55779,7 @@ var BooklistForm = function (_React$Component) {
 
 exports.default = BooklistForm;
 
-},{"react":266}],290:[function(require,module,exports){
+},{"react":266}],291:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55814,7 +55864,70 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"react":266}],291:[function(require,module,exports){
+},{"react":266}],292:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SearchPanel = function (_React$Component) {
+  _inherits(SearchPanel, _React$Component);
+
+  function SearchPanel() {
+    _classCallCheck(this, SearchPanel);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SearchPanel).call(this));
+
+    _this.state = {
+      comments: []
+    };
+
+    _this._handleSubmit = _this._handleSubmit.bind(_this);
+    return _this;
+  }
+
+  _createClass(SearchPanel, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "formContainer" },
+        _react2.default.createElement(
+          "form",
+          { className: "searchBar" },
+          _react2.default.createElement("input", { className: "searchBar__inputText", placeholder: "Search for ..." }),
+          _react2.default.createElement("input", { className: "searchBar__button", type: "submit" })
+        )
+      );
+    }
+  }, {
+    key: "_handleSubmit",
+    value: function _handleSubmit(e) {
+      e.preventDefault();
+    }
+  }]);
+
+  return SearchPanel;
+}(_react2.default.Component);
+
+exports.default = SearchPanel;
+
+},{"react":266}],293:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -55853,7 +55966,7 @@ var provider = _react2.default.createElement(
   });
 });
 
-},{"./router":294,"./store":296,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],292:[function(require,module,exports){
+},{"./router":296,"./store":298,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],294:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55892,7 +56005,7 @@ function booklist() {
 
 exports.default = booklist;
 
-},{"lodash":73}],293:[function(require,module,exports){
+},{"lodash":73}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55916,7 +56029,7 @@ var rootReducer = (0, _redux.combineReducers)({
 
 exports.default = rootReducer;
 
-},{"./booklist":292,"react-router-redux":85,"redux":272}],294:[function(require,module,exports){
+},{"./booklist":294,"react-router-redux":85,"redux":272}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55953,6 +56066,10 @@ var _booksContainer = require('./components/containers/books-container');
 
 var _booksContainer2 = _interopRequireDefault(_booksContainer);
 
+var _searchContainer = require('./components/containers/search-container');
+
+var _searchContainer2 = _interopRequireDefault(_searchContainer);
+
 var _authorsContainer = require('./components/containers/authors-container');
 
 var _authorsContainer2 = _interopRequireDefault(_authorsContainer);
@@ -55978,7 +56095,7 @@ var router = _react2.default.createElement(
 						_react2.default.createElement(
 									_reactRouter.Route,
 									{ path: 'search', component: _searchLayout2.default },
-									_react2.default.createElement(_reactRouter.IndexRoute, { component: _booksContainer2.default })
+									_react2.default.createElement(_reactRouter.IndexRoute, { component: _searchContainer2.default })
 						),
 						_react2.default.createElement(
 									_reactRouter.Route,
@@ -55995,7 +56112,7 @@ var router = _react2.default.createElement(
 
 exports.default = router;
 
-},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/layouts/authors-layout":283,"./components/layouts/books-layout":284,"./components/layouts/clubs-layout":285,"./components/layouts/main-layout":286,"./components/layouts/search-layout":287,"react":266,"react-router":118}],295:[function(require,module,exports){
+},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/containers/search-container":282,"./components/layouts/authors-layout":284,"./components/layouts/books-layout":285,"./components/layouts/clubs-layout":286,"./components/layouts/main-layout":287,"./components/layouts/search-layout":288,"react":266,"react-router":118}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56032,7 +56149,7 @@ function deleteBook(id) {
   });
 }
 
-},{"../actions/action-creator":278,"../store":296,"axios":1}],296:[function(require,module,exports){
+},{"../actions/action-creator":278,"../store":298,"axios":1}],298:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56050,5 +56167,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_reducers2.default);
 exports.default = store;
 
-},{"./reducers":293,"redux":272}]},{},[291])
+},{"./reducers":295,"redux":272}]},{},[293])
 //# sourceMappingURL=bundle.js.map

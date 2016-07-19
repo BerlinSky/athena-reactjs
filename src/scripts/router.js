@@ -9,6 +9,7 @@ import authorsLayout from './components/layouts/authors-layout';
 import clubsLayout from './components/layouts/clubs-layout';
 
 import booksContainer from './components/containers/books-container';
+import searchContainer from './components/containers/search-container';
 import authorsContainer from './components/containers/authors-container';
 import clubsContainer from './components/containers/clubs-container';
 
@@ -22,7 +23,7 @@ const router = (
 	    </Route> 
 
 	    <Route path="search" component={searchLayout}>
-				<IndexRoute component={booksContainer} />
+				<IndexRoute component={searchContainer} />
 	    </Route> 
 
 	    <Route path="authors" component={authorsLayout}>
