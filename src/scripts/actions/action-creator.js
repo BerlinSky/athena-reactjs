@@ -22,3 +22,10 @@ export function getBooklistAction(booklist) {
 		booklist
 	}
 }
+
+export function searchBooklistAction(title) {
+	return {
+		type: 'SEARCH_BOOK_LIST',
+		booklist
+	}
+}

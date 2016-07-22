@@ -54808,6 +54808,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.addBookAction = addBookAction;
 exports.removeBookAction = removeBookAction;
 exports.getBooklistAction = getBooklistAction;
+exports.searchBooklistAction = searchBooklistAction;
 function addBookAction(id, title, author, imageUrl, description) {
 	return {
 		type: 'ADD_BOOK',
@@ -54829,6 +54830,13 @@ function removeBookAction(id) {
 function getBooklistAction(booklist) {
 	return {
 		type: 'GET_BOOK_LIST',
+		booklist: booklist
+	};
+}
+
+function searchBooklistAction(title) {
+	return {
+		type: 'SEARCH_BOOK_LIST',
 		booklist: booklist
 	};
 }
@@ -55993,6 +56001,9 @@ function booklist() {
 		case 'GET_BOOK_LIST':
 			return Object.assign({}, state, { booklist: action.booklist });
 
+		case 'SEARCH_BOOK_LIST':
+			return Object.assign({}, state, { booklist: action.booklist });
+
 		case 'REMOVE_BOOK':
 			var newBooklist = _lodash2.default.filter(state.booklist, function (book) {
 				return book.id != action.id;
@@ -56119,6 +56130,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getBooklist = getBooklist;
+exports.searchBooklist = searchBooklist;
 exports.deleteBook = deleteBook;
 
 var _axios = require('axios');
@@ -56138,6 +56150,17 @@ function getBooklist() {
   // .then(response => response.data);
   .then(function (response) {
     _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response.data));
+    return response;
+  });
+}
+
+function searchBooklist(searchTitle) {
+  return _axios2.default.get('http://localhost:3001/master-booklist', {
+    params: {
+      title: searchTitle
+    }
+  }).then(function (response) {
+    _store2.default.dispatch(searchBooklistAction(response.data));
     return response;
   });
 }
