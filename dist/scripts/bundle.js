@@ -54856,6 +54856,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -54868,12 +54870,26 @@ var AuthorsContainer = function (_React$Component) {
   function AuthorsContainer() {
     _classCallCheck(this, AuthorsContainer);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorsContainer).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorsContainer).call(this));
+
+    _this.state = {
+      checked_1: true,
+      checked_2: false,
+      checked_3: false
+    };
+    return _this;
   }
 
   _createClass(AuthorsContainer, [{
     key: "render",
     value: function render() {
+      var _props = this.props;
+      var name = _props.name;
+      var value = _props.value;
+      var checked = _props.checked;
+      var label = _props.label;
+
+
       return _react2.default.createElement(
         "section",
         { className: "l-mainContent mainContent" },
@@ -54888,19 +54904,22 @@ var AuthorsContainer = function (_React$Component) {
               { className: "slideShowTitle" },
               "ENJOY THE SHOW"
             ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-1", name: "slide", "aria-hidden": "true", hidden: "", checked: "checked" }),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-1", name: "slide", "aria-hidden": "true",
+              hidden: "true", checked: this.state.checked_1 }),
             _react2.default.createElement(
               "div",
               { className: "slide" },
               _react2.default.createElement("img", { src: "./images/box-01.jpg" })
             ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-2", name: "slide", "aria-hidden": "true", hidden: "" }),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-2", name: "slide", "aria-hidden": "true",
+              hidden: "true", checked: this.state.checked_2 }),
             _react2.default.createElement(
               "div",
               { className: "slide" },
               _react2.default.createElement("img", { src: "./images/box-02.jpg" })
             ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-3", name: "slide", "aria-hidden": "true", hidden: "" }),
+            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-3", name: "slide", "aria-hidden": "true",
+              hidden: "true", checked: this.state.checked_3 }),
             _react2.default.createElement(
               "div",
               { className: "slide" },
@@ -54944,7 +54963,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-1", className: "slides__pointer" },
+                  { htmlFor: "slide-1", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 1) },
                   "•"
                 )
               ),
@@ -54953,7 +54972,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-2", className: "slides__pointer" },
+                  { htmlFor: "slide-2", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 2) },
                   "•"
                 )
               ),
@@ -54962,7 +54981,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-3", className: "slides__pointer" },
+                  { htmlFor: "slide-3", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 3) },
                   "•"
                 )
               )
@@ -54970,6 +54989,26 @@ var AuthorsContainer = function (_React$Component) {
           )
         )
       );
+    }
+  }, {
+    key: "_handleSlidePointerClick",
+    value: function _handleSlidePointerClick(slideId) {
+      // event.preventDefault()
+
+      console.clear();
+
+      // const el = event.target
+      // console.log(el)
+
+      this.setState({
+        checked_1: false,
+        checked_2: false,
+        checked_3: false
+      });
+
+      var key = "checked_" + slideId;
+
+      this.setState(_defineProperty({}, key, true));
     }
   }]);
 
