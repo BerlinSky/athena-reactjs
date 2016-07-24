@@ -54993,12 +54993,7 @@ var AuthorsContainer = function (_React$Component) {
   }, {
     key: "_handleSlidePointerClick",
     value: function _handleSlidePointerClick(slideId) {
-      // event.preventDefault()
-
       console.clear();
-
-      // const el = event.target
-      // console.log(el)
 
       this.setState({
         checked_1: false,

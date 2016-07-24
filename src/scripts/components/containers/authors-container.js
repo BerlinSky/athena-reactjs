@@ -62,12 +62,7 @@ export default class AuthorsContainer extends React.Component {
   }
 
   _handleSlidePointerClick(slideId) {
-    // event.preventDefault()
-
     console.clear();
-
-    // const el = event.target
-    // console.log(el)
 
     this.setState({
       checked_1: false,
