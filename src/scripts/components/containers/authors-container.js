@@ -6,36 +6,27 @@ export default class AuthorsContainer extends React.Component {
     super();
 
     this.state = {
-      checked_1: true,
-      checked_2: false,
-      checked_3: false
+      radioItemList: []
     };
+
+    this.radioItemList = [
+      {id: "slide-1", checked: true, imageUrl: "./images/box-01.jpg"},
+      {id: "slide-2", checked: false, imageUrl: "./images/box-02.jpg"},
+      {id: "slide-3", checked: false, imageUrl: "./images/box-03.jpg"}
+    ];
   }
 
   render() {
-    const {name, value, checked, label} = this.props;
+    const radioButtonList = this._getRadioItemList();
 
     return (
       <section className="l-mainContent mainContent">
+
        <div className="slideContainer">
          <div className="slides">
            <div className="slideShowTitle">ENJOY THE SHOW</div>
 
-           <input className="showOption" type="radio" id="slide-1" name="slide" aria-hidden="true" 
-            hidden="true" checked={this.state.checked_1} />
-           <div className="slide">
-             <img src="./images/box-01.jpg" />
-           </div>
-           <input className="showOption" type="radio" id="slide-2" name="slide" aria-hidden="true" 
-            hidden="true" checked={this.state.checked_2} />
-           <div className="slide">
-             <img src="./images/box-02.jpg" />
-           </div>
-           <input className="showOption" type="radio" id="slide-3" name="slide" aria-hidden="true" 
-            hidden="true" checked={this.state.checked_3} />
-           <div className="slide">
-             <img src="./images/box-03.jpg" />
-           </div>
+           { radioButtonList }
 
            <label htmlFor="slide-3" className="slides__navigator slides__navigator--prev nav-1">‹</label>
            <label htmlFor="slide-2" className="slides__navigator slides__navigator--next nav-1">›</label>
@@ -46,34 +37,49 @@ export default class AuthorsContainer extends React.Component {
 
            <ol className="slides__indicators">
              <li>
-               <label htmlFor="slide-1" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, 1)}>•</label>
+               <label htmlFor="slide-1" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, "slide-1")}>•</label>
              </li>
              <li>
-               <label htmlFor="slide-2" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, 2)}>•</label>
+               <label htmlFor="slide-2" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, "slide-2")}>•</label>
              </li>
              <li>
-               <label htmlFor="slide-3" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, 3)}>•</label>
+               <label htmlFor="slide-3" className="slides__pointer" onClick={this._handleSlidePointerClick.bind(this, "slide-3")}>•</label>
              </li>
            </ol>
          </div>
        </div> 
+
       </section>
     )
+  }
+
+  _getRadioItemList() {
+    return this.radioItemList.map((item) => {
+      return (
+        <div key={item.id}>
+          <input className="showOption" type="radio" 
+          id={item.id} 
+          hidden="true"
+          name="slide" 
+          readOnly="true"
+          checked={item.checked} />
+          <div className="slide">
+             <img src={ item.imageUrl } />
+          </div>
+        </div>
+      );
+    });
   }
 
   _handleSlidePointerClick(slideId) {
     console.clear();
 
-    this.setState({
-      checked_1: false,
-      checked_2: false,
-      checked_3: false
-    });
-
-    const key = "checked_" + slideId;
+    const items = this.radioItemList.map((item) => {
+      (item.id === slideId) ?  (item.checked = true) : (item.checked = false);
+    })
 
     this.setState({
-      [key]: true
+      radioItemList: items
     });
   }
 

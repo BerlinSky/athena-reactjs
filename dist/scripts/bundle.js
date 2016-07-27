@@ -54856,8 +54856,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -54873,22 +54871,17 @@ var AuthorsContainer = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AuthorsContainer).call(this));
 
     _this.state = {
-      checked_1: true,
-      checked_2: false,
-      checked_3: false
+      radioItemList: []
     };
+
+    _this.radioItemList = [{ id: "slide-1", checked: true, imageUrl: "./images/box-01.jpg" }, { id: "slide-2", checked: false, imageUrl: "./images/box-02.jpg" }, { id: "slide-3", checked: false, imageUrl: "./images/box-03.jpg" }];
     return _this;
   }
 
   _createClass(AuthorsContainer, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var name = _props.name;
-      var value = _props.value;
-      var checked = _props.checked;
-      var label = _props.label;
-
+      var radioButtonList = this._getRadioItemList();
 
       return _react2.default.createElement(
         "section",
@@ -54904,27 +54897,7 @@ var AuthorsContainer = function (_React$Component) {
               { className: "slideShowTitle" },
               "ENJOY THE SHOW"
             ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-1", name: "slide", "aria-hidden": "true",
-              hidden: "true", checked: this.state.checked_1 }),
-            _react2.default.createElement(
-              "div",
-              { className: "slide" },
-              _react2.default.createElement("img", { src: "./images/box-01.jpg" })
-            ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-2", name: "slide", "aria-hidden": "true",
-              hidden: "true", checked: this.state.checked_2 }),
-            _react2.default.createElement(
-              "div",
-              { className: "slide" },
-              _react2.default.createElement("img", { src: "./images/box-02.jpg" })
-            ),
-            _react2.default.createElement("input", { className: "showOption", type: "radio", id: "slide-3", name: "slide", "aria-hidden": "true",
-              hidden: "true", checked: this.state.checked_3 }),
-            _react2.default.createElement(
-              "div",
-              { className: "slide" },
-              _react2.default.createElement("img", { src: "./images/box-03.jpg" })
-            ),
+            radioButtonList,
             _react2.default.createElement(
               "label",
               { htmlFor: "slide-3", className: "slides__navigator slides__navigator--prev nav-1" },
@@ -54963,7 +54936,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-1", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 1) },
+                  { htmlFor: "slide-1", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, "slide-1") },
                   "•"
                 )
               ),
@@ -54972,7 +54945,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-2", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 2) },
+                  { htmlFor: "slide-2", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, "slide-2") },
                   "•"
                 )
               ),
@@ -54981,7 +54954,7 @@ var AuthorsContainer = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                   "label",
-                  { htmlFor: "slide-3", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, 3) },
+                  { htmlFor: "slide-3", className: "slides__pointer", onClick: this._handleSlidePointerClick.bind(this, "slide-3") },
                   "•"
                 )
               )
@@ -54991,19 +54964,38 @@ var AuthorsContainer = function (_React$Component) {
       );
     }
   }, {
+    key: "_getRadioItemList",
+    value: function _getRadioItemList() {
+      return this.radioItemList.map(function (item) {
+        return _react2.default.createElement(
+          "div",
+          { key: item.id },
+          _react2.default.createElement("input", { className: "showOption", type: "radio",
+            id: item.id,
+            hidden: "true",
+            name: "slide",
+            readOnly: "true",
+            checked: item.checked }),
+          _react2.default.createElement(
+            "div",
+            { className: "slide" },
+            _react2.default.createElement("img", { src: item.imageUrl })
+          )
+        );
+      });
+    }
+  }, {
     key: "_handleSlidePointerClick",
     value: function _handleSlidePointerClick(slideId) {
       console.clear();
 
-      this.setState({
-        checked_1: false,
-        checked_2: false,
-        checked_3: false
+      var items = this.radioItemList.map(function (item) {
+        item.id === slideId ? item.checked = true : item.checked = false;
       });
 
-      var key = "checked_" + slideId;
-
-      this.setState(_defineProperty({}, key, true));
+      this.setState({
+        radioItemList: items
+      });
     }
   }]);
 
