@@ -55144,7 +55144,7 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BooksContainer);
 
-},{"../../services/booklist-service":297,"../../store":298,"../views/booklist-form":290,"../views/booklist-panel":291,"react":266,"react-redux":79}],281:[function(require,module,exports){
+},{"../../services/booklist-service":298,"../../store":299,"../views/booklist-form":291,"../views/booklist-panel":292,"react":266,"react-redux":79}],281:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55253,7 +55253,451 @@ var AuthorsContainer = function (_React$Component) {
 
 exports.default = AuthorsContainer;
 
-},{"../views/search-panel":292,"react":266}],283:[function(require,module,exports){
+},{"../views/search-panel":293,"react":266}],283:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ShoppingCartContainer = function (_React$Component) {
+  _inherits(ShoppingCartContainer, _React$Component);
+
+  function ShoppingCartContainer() {
+    _classCallCheck(this, ShoppingCartContainer);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ShoppingCartContainer).apply(this, arguments));
+  }
+
+  _createClass(ShoppingCartContainer, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { className: "l-mainContent mainContent" },
+        _react2.default.createElement(
+          "div",
+          { className: "l-panelContainer panelContainer" },
+          _react2.default.createElement(
+            "div",
+            { className: "l-panel formContainer formContainer--smallSpaceOnRight formContainer--noButtomBorder" },
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "1    Review Cart"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "formContainer" },
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow tableHeader" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--default tableRow__headerText" },
+                  "Item"
+                ),
+                _react2.default.createElement("div", { className: "tableRow__column--6x tableRow__headerText" }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--2x tableRow__headerText" },
+                  "Size"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__num--xx tableRow__column--default tableRow__headerText" },
+                  "Amount"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--default tableRow__image" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "cartItemImage" },
+                    _react2.default.createElement("img", { src: "./images/middle-march.jpg" })
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--6x tableRow__bodyText" },
+                  "Summer 2013 Metropolitan Book Tour (NYC2013)"
+                ),
+                _react2.default.createElement("div", { className: "tableRow__column--2x tableRow__bodyText" }),
+                _react2.default.createElement("div", { className: "tableRow__num tableRow__bodyNum" })
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--default tableRow__image--component" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "cartItemImage" },
+                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--6x tableRow__bodyText" },
+                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  _react2.default.createElement(
+                    "select",
+                    { className: "js-selectItemSize" },
+                    _react2.default.createElement(
+                      "option",
+                      { value: "0" },
+                      "XXS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "1" },
+                      "XS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "2" },
+                      "S"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "3" },
+                      "M"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "4" },
+                      "L"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "5" },
+                      "XL"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "6" },
+                      "XXL"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__num tableRow__bodyNum" },
+                  "US$ 89.95"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--default tableRow__image--component" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "cartItemImage" },
+                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--6x tableRow__bodyText" },
+                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  _react2.default.createElement(
+                    "select",
+                    { className: "js-selectItemSize" },
+                    _react2.default.createElement(
+                      "option",
+                      { value: "0" },
+                      "XXS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "1" },
+                      "XS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "2" },
+                      "S"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "3" },
+                      "M"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "4" },
+                      "L"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "5" },
+                      "XL"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "6" },
+                      "XXL"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__num tableRow__bodyNum" },
+                  "US$ 89.95"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--default tableRow__image--component" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "cartItemImage" },
+                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--6x tableRow__bodyText" },
+                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  _react2.default.createElement(
+                    "select",
+                    { className: "js-selectItemSize" },
+                    _react2.default.createElement(
+                      "option",
+                      { value: "0" },
+                      "XXS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "1" },
+                      "XS"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "2" },
+                      "S"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "3" },
+                      "M"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "4" },
+                      "L"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "5" },
+                      "XL"
+                    ),
+                    _react2.default.createElement(
+                      "option",
+                      { value: "6" },
+                      "XXL"
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__num tableRow__bodyNum" },
+                  "US$ 89.95"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement("div", { className: "tableRow__column--default tableRow__image--component" }),
+                _react2.default.createElement("div", { className: "tableRow__column--6x tableRow__bodyText" }),
+                _react2.default.createElement(
+                  "div",
+                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  "Total"
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__num tableRow__bodyNum" },
+                  "US$ 89.95"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "tableRow" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--6x" },
+                  _react2.default.createElement(
+                    "form",
+                    { className: "dataForm" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "inputGroup" },
+                      _react2.default.createElement("input", { className: "dataInput", type: "text" }),
+                      _react2.default.createElement(
+                        "label",
+                        null,
+                        "Coupon Code"
+                      )
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "tableRow__column--2x tableRow__bodyText" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "dataForm__buttonPanel" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "actionButton" },
+                      "apply"
+                    )
+                  )
+                ),
+                _react2.default.createElement("div", { className: " tableRow__column--2x tableRow__bodyText" }),
+                _react2.default.createElement("div", { className: "tableRow__num tableRow__bodyNum" })
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "dataForm__buttonPanel" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "actionButton", href: "2-review-address.html" },
+                  "next"
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "2    Review Address(es)"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "3    Billing Address"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "4    Shipping Address"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "5    Payment Information"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "6    Review Order"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "stepTitle" },
+              "7    Invoice"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "l-panel cartStepsContainer" },
+            _react2.default.createElement(
+              "div",
+              { className: "cartSteps" },
+              _react2.default.createElement(
+                "div",
+                { className: "cartSteps__title" },
+                "Your Checkout Process"
+              ),
+              _react2.default.createElement(
+                "ul",
+                { className: "cartSteps__list" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Review Cart"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Review Address(es)"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Billing Address"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Shipping Address"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Payment Information"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Review Order"
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "Invoice"
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return ShoppingCartContainer;
+}(_react2.default.Component);
+
+exports.default = ShoppingCartContainer;
+
+},{"react":266}],284:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55303,7 +55747,7 @@ var AppFooter = function (_React$Component) {
 
 exports.default = AppFooter;
 
-},{"react":266}],284:[function(require,module,exports){
+},{"react":266}],285:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55349,7 +55793,7 @@ var AuthorsLayout = function (_React$Component) {
 
 exports.default = AuthorsLayout;
 
-},{"react":266}],285:[function(require,module,exports){
+},{"react":266}],286:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55413,7 +55857,7 @@ var BooksLayout = function (_React$Component) {
 
 exports.default = BooksLayout;
 
-},{"react":266}],286:[function(require,module,exports){
+},{"react":266}],287:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55459,7 +55903,7 @@ var ClubsLayout = function (_React$Component) {
 
 exports.default = ClubsLayout;
 
-},{"react":266}],287:[function(require,module,exports){
+},{"react":266}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55531,7 +55975,7 @@ var MainLayout = function (_React$Component) {
 
 exports.default = MainLayout;
 
-},{"../footer":283,"../navigation":289,"react":266}],288:[function(require,module,exports){
+},{"../footer":284,"../navigation":290,"react":266}],289:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55577,7 +56021,7 @@ var SearchLayout = function (_React$Component) {
 
 exports.default = SearchLayout;
 
-},{"react":266}],289:[function(require,module,exports){
+},{"react":266}],290:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -55694,7 +56138,7 @@ var AppNavigation = function (_React$Component) {
 
 exports.default = AppNavigation;
 
-},{"react":266,"react-router":118}],290:[function(require,module,exports){
+},{"react":266,"react-router":118}],291:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55813,7 +56257,7 @@ var BooklistForm = function (_React$Component) {
 
 exports.default = BooklistForm;
 
-},{"react":266}],291:[function(require,module,exports){
+},{"react":266}],292:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55898,7 +56342,7 @@ var BooklistPanel = function (_React$Component) {
 
 exports.default = BooklistPanel;
 
-},{"react":266}],292:[function(require,module,exports){
+},{"react":266}],293:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55961,7 +56405,7 @@ var SearchPanel = function (_React$Component) {
 
 exports.default = SearchPanel;
 
-},{"react":266}],293:[function(require,module,exports){
+},{"react":266}],294:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -56000,7 +56444,7 @@ var provider = _react2.default.createElement(
   });
 });
 
-},{"./router":296,"./store":298,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],294:[function(require,module,exports){
+},{"./router":297,"./store":299,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56042,7 +56486,7 @@ function booklist() {
 
 exports.default = booklist;
 
-},{"lodash":73}],295:[function(require,module,exports){
+},{"lodash":73}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56066,7 +56510,7 @@ var rootReducer = (0, _redux.combineReducers)({
 
 exports.default = rootReducer;
 
-},{"./booklist":294,"react-router-redux":85,"redux":272}],296:[function(require,module,exports){
+},{"./booklist":295,"react-router-redux":85,"redux":272}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56111,6 +56555,10 @@ var _authorsContainer = require('./components/containers/authors-container');
 
 var _authorsContainer2 = _interopRequireDefault(_authorsContainer);
 
+var _shoppingCartContainer = require('./components/containers/shopping-cart-container');
+
+var _shoppingCartContainer2 = _interopRequireDefault(_shoppingCartContainer);
+
 var _clubsContainer = require('./components/containers/clubs-container');
 
 var _clubsContainer2 = _interopRequireDefault(_clubsContainer);
@@ -56141,6 +56589,11 @@ var router = _react2.default.createElement(
 						),
 						_react2.default.createElement(
 									_reactRouter.Route,
+									{ path: 'shopping-cart', component: _shoppingCartContainer2.default },
+									_react2.default.createElement(_reactRouter.IndexRoute, { component: _shoppingCartContainer2.default })
+						),
+						_react2.default.createElement(
+									_reactRouter.Route,
 									{ path: 'clubs', component: _clubsLayout2.default },
 									_react2.default.createElement(_reactRouter.IndexRoute, { component: _clubsContainer2.default })
 						)
@@ -56149,7 +56602,7 @@ var router = _react2.default.createElement(
 
 exports.default = router;
 
-},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/containers/search-container":282,"./components/layouts/authors-layout":284,"./components/layouts/books-layout":285,"./components/layouts/clubs-layout":286,"./components/layouts/main-layout":287,"./components/layouts/search-layout":288,"react":266,"react-router":118}],297:[function(require,module,exports){
+},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/containers/search-container":282,"./components/containers/shopping-cart-container":283,"./components/layouts/authors-layout":285,"./components/layouts/books-layout":286,"./components/layouts/clubs-layout":287,"./components/layouts/main-layout":288,"./components/layouts/search-layout":289,"react":266,"react-router":118}],298:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56198,7 +56651,7 @@ function deleteBook(id) {
   });
 }
 
-},{"../actions/action-creator":278,"../store":298,"axios":1}],298:[function(require,module,exports){
+},{"../actions/action-creator":278,"../store":299,"axios":1}],299:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56216,5 +56669,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_reducers2.default);
 exports.default = store;
 
-},{"./reducers":295,"redux":272}]},{},[293])
+},{"./reducers":296,"redux":272}]},{},[294])
 //# sourceMappingURL=bundle.js.map

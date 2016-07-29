@@ -11,6 +11,7 @@ import clubsLayout from './components/layouts/clubs-layout';
 import booksContainer from './components/containers/books-container';
 import searchContainer from './components/containers/search-container';
 import authorsContainer from './components/containers/authors-container';
+import shoppingCartContainer from './components/containers/shopping-cart-container';
 import clubsContainer from './components/containers/clubs-container';
 
 const router = (
@@ -28,6 +29,10 @@ const router = (
 
 	    <Route path="authors" component={authorsLayout}>
 				<IndexRoute component={authorsContainer} />
+	    </Route> 
+
+	    <Route path="shopping-cart" component={shoppingCartContainer}>
+				<IndexRoute component={shoppingCartContainer} />
 	    </Route> 
 
 	    <Route path="clubs" component={clubsLayout}>

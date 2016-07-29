@@ -117,7 +117,7 @@ gulp.task('watch', ['html', 'sass', 'transpile'], () => {
   gulp.watch('src/*.html', ['html-watch'])
   gulp.watch(config.paths.sass, ['sass-watch'])
   gulp.watch('src/scripts/**/*.js', ['js-watch'])
-  gulp.watch('src/scripts/**/*.jsx', ['js-watch'])
+  gulp.watch('src/scripts/**/*.js', ['js-watch'])
 })
 
 gulp.task('setup-db', function() {
