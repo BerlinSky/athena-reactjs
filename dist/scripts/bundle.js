@@ -55142,7 +55142,7 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(BooksContainer);
 
-},{"../../services/booklist-service":298,"../../store":299,"../views/booklist-form":291,"../views/booklist-panel":292,"react":266,"react-redux":79}],281:[function(require,module,exports){
+},{"../../services/booklist-service":299,"../../store":300,"../views/booklist-form":291,"../views/booklist-panel":292,"react":266,"react-redux":79}],281:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55313,8 +55313,8 @@ var mapStateToProps = function mapStateToProps(store) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(SearchContainer);
 
-},{"../../services/booklist-service":298,"../../store":299,"../views/booklist-panel":292,"../views/search-panel":293,"react":266,"react-redux":79}],283:[function(require,module,exports){
-"use strict";
+},{"../../services/booklist-service":299,"../../store":300,"../views/booklist-panel":292,"../views/search-panel":293,"react":266,"react-redux":79}],283:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -55322,9 +55322,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _cartSteps = require('../views/shopping-cart/cart-steps');
+
+var _cartSteps2 = _interopRequireDefault(_cartSteps);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55344,409 +55348,358 @@ var ShoppingCartContainer = function (_React$Component) {
   }
 
   _createClass(ShoppingCartContainer, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "section",
-        { className: "l-mainContent mainContent" },
+        'section',
+        { className: 'l-mainContent mainContent' },
         _react2.default.createElement(
-          "div",
-          { className: "l-panelContainer panelContainer" },
+          'div',
+          { className: 'l-panelContainer panelContainer' },
           _react2.default.createElement(
-            "div",
-            { className: "l-panel formContainer formContainer--smallSpaceOnRight formContainer--noButtomBorder" },
+            'div',
+            { className: 'l-panel formContainer formContainer--smallSpaceOnRight formContainer--noButtomBorder' },
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "1    Review Cart"
+              'div',
+              { className: 'stepTitle' },
+              '1    Review Cart'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "formContainer" },
+              'div',
+              { className: 'formContainer' },
               _react2.default.createElement(
-                "div",
-                { className: "tableRow tableHeader" },
+                'div',
+                { className: 'tableRow tableHeader' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--default tableRow__headerText" },
-                  "Item"
+                  'div',
+                  { className: 'tableRow__column--default tableRow__headerText' },
+                  'Item'
                 ),
-                _react2.default.createElement("div", { className: "tableRow__column--6x tableRow__headerText" }),
+                _react2.default.createElement('div', { className: 'tableRow__column--6x tableRow__headerText' }),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--2x tableRow__headerText" },
-                  "Size"
+                  'div',
+                  { className: 'tableRow__column--2x tableRow__headerText' },
+                  'Size'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__num--xx tableRow__column--default tableRow__headerText" },
-                  "Amount"
+                  'div',
+                  { className: 'tableRow__num--xx tableRow__column--default tableRow__headerText' },
+                  'Amount'
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
+                'div',
+                { className: 'tableRow' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--default tableRow__image" },
+                  'div',
+                  { className: 'tableRow__column--default tableRow__image' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "cartItemImage" },
-                    _react2.default.createElement("img", { src: "./images/middle-march.jpg" })
+                    'div',
+                    { className: 'cartItemImage' },
+                    _react2.default.createElement('img', { src: './images/middle-march.jpg' })
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--6x tableRow__bodyText" },
-                  "Summer 2013 Metropolitan Book Tour (NYC2013)"
+                  'div',
+                  { className: 'tableRow__column--6x tableRow__bodyText' },
+                  'Summer 2013 Metropolitan Book Tour (NYC2013)'
                 ),
-                _react2.default.createElement("div", { className: "tableRow__column--2x tableRow__bodyText" }),
-                _react2.default.createElement("div", { className: "tableRow__num tableRow__bodyNum" })
+                _react2.default.createElement('div', { className: 'tableRow__column--2x tableRow__bodyText' }),
+                _react2.default.createElement('div', { className: 'tableRow__num tableRow__bodyNum' })
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
+                'div',
+                { className: 'tableRow' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--default tableRow__image--component" },
+                  'div',
+                  { className: 'tableRow__column--default tableRow__image--component' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "cartItemImage" },
-                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                    'div',
+                    { className: 'cartItemImage' },
+                    _react2.default.createElement('img', { src: './images/the-grapes-of-wrath.jpg' })
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--6x tableRow__bodyText" },
-                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                  'div',
+                  { className: 'tableRow__column--6x tableRow__bodyText' },
+                  'Winter 2016 West Coast Book Tour (LAC2016)'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  'div',
+                  { className: ' tableRow__column--2x tableRow__bodyText' },
                   _react2.default.createElement(
-                    "select",
-                    { className: "js-selectItemSize" },
+                    'select',
+                    { className: 'js-selectItemSize' },
                     _react2.default.createElement(
-                      "option",
-                      { value: "0" },
-                      "XXS"
+                      'option',
+                      { value: '0' },
+                      'XXS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "1" },
-                      "XS"
+                      'option',
+                      { value: '1' },
+                      'XS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "2" },
-                      "S"
+                      'option',
+                      { value: '2' },
+                      'S'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "3" },
-                      "M"
+                      'option',
+                      { value: '3' },
+                      'M'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "4" },
-                      "L"
+                      'option',
+                      { value: '4' },
+                      'L'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "5" },
-                      "XL"
+                      'option',
+                      { value: '5' },
+                      'XL'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "6" },
-                      "XXL"
+                      'option',
+                      { value: '6' },
+                      'XXL'
                     )
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__num tableRow__bodyNum" },
-                  "US$ 89.95"
+                  'div',
+                  { className: 'tableRow__num tableRow__bodyNum' },
+                  'US$ 89.95'
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
+                'div',
+                { className: 'tableRow' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--default tableRow__image--component" },
+                  'div',
+                  { className: 'tableRow__column--default tableRow__image--component' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "cartItemImage" },
-                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                    'div',
+                    { className: 'cartItemImage' },
+                    _react2.default.createElement('img', { src: './images/the-grapes-of-wrath.jpg' })
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--6x tableRow__bodyText" },
-                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                  'div',
+                  { className: 'tableRow__column--6x tableRow__bodyText' },
+                  'Winter 2016 West Coast Book Tour (LAC2016)'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  'div',
+                  { className: ' tableRow__column--2x tableRow__bodyText' },
                   _react2.default.createElement(
-                    "select",
-                    { className: "js-selectItemSize" },
+                    'select',
+                    { className: 'js-selectItemSize' },
                     _react2.default.createElement(
-                      "option",
-                      { value: "0" },
-                      "XXS"
+                      'option',
+                      { value: '0' },
+                      'XXS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "1" },
-                      "XS"
+                      'option',
+                      { value: '1' },
+                      'XS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "2" },
-                      "S"
+                      'option',
+                      { value: '2' },
+                      'S'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "3" },
-                      "M"
+                      'option',
+                      { value: '3' },
+                      'M'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "4" },
-                      "L"
+                      'option',
+                      { value: '4' },
+                      'L'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "5" },
-                      "XL"
+                      'option',
+                      { value: '5' },
+                      'XL'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "6" },
-                      "XXL"
+                      'option',
+                      { value: '6' },
+                      'XXL'
                     )
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__num tableRow__bodyNum" },
-                  "US$ 89.95"
+                  'div',
+                  { className: 'tableRow__num tableRow__bodyNum' },
+                  'US$ 89.95'
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
+                'div',
+                { className: 'tableRow' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--default tableRow__image--component" },
+                  'div',
+                  { className: 'tableRow__column--default tableRow__image--component' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "cartItemImage" },
-                    _react2.default.createElement("img", { src: "./images/the-grapes-of-wrath.jpg" })
+                    'div',
+                    { className: 'cartItemImage' },
+                    _react2.default.createElement('img', { src: './images/the-grapes-of-wrath.jpg' })
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--6x tableRow__bodyText" },
-                  "Winter 2016 West Coast Book Tour (LAC2016)"
+                  'div',
+                  { className: 'tableRow__column--6x tableRow__bodyText' },
+                  'Winter 2016 West Coast Book Tour (LAC2016)'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: " tableRow__column--2x tableRow__bodyText" },
+                  'div',
+                  { className: ' tableRow__column--2x tableRow__bodyText' },
                   _react2.default.createElement(
-                    "select",
-                    { className: "js-selectItemSize" },
+                    'select',
+                    { className: 'js-selectItemSize' },
                     _react2.default.createElement(
-                      "option",
-                      { value: "0" },
-                      "XXS"
+                      'option',
+                      { value: '0' },
+                      'XXS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "1" },
-                      "XS"
+                      'option',
+                      { value: '1' },
+                      'XS'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "2" },
-                      "S"
+                      'option',
+                      { value: '2' },
+                      'S'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "3" },
-                      "M"
+                      'option',
+                      { value: '3' },
+                      'M'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "4" },
-                      "L"
+                      'option',
+                      { value: '4' },
+                      'L'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "5" },
-                      "XL"
+                      'option',
+                      { value: '5' },
+                      'XL'
                     ),
                     _react2.default.createElement(
-                      "option",
-                      { value: "6" },
-                      "XXL"
+                      'option',
+                      { value: '6' },
+                      'XXL'
                     )
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__num tableRow__bodyNum" },
-                  "US$ 89.95"
+                  'div',
+                  { className: 'tableRow__num tableRow__bodyNum' },
+                  'US$ 89.95'
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
-                _react2.default.createElement("div", { className: "tableRow__column--default tableRow__image--component" }),
-                _react2.default.createElement("div", { className: "tableRow__column--6x tableRow__bodyText" }),
+                'div',
+                { className: 'tableRow' },
+                _react2.default.createElement('div', { className: 'tableRow__column--default tableRow__image--component' }),
+                _react2.default.createElement('div', { className: 'tableRow__column--6x tableRow__bodyText' }),
                 _react2.default.createElement(
-                  "div",
-                  { className: " tableRow__column--2x tableRow__bodyText" },
-                  "Total"
+                  'div',
+                  { className: ' tableRow__column--2x tableRow__bodyText' },
+                  'Total'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__num tableRow__bodyNum" },
-                  "US$ 89.95"
+                  'div',
+                  { className: 'tableRow__num tableRow__bodyNum' },
+                  'US$ 89.95'
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "tableRow" },
+                'div',
+                { className: 'tableRow' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--6x" },
+                  'div',
+                  { className: 'tableRow__column--6x' },
                   _react2.default.createElement(
-                    "form",
-                    { className: "dataForm" },
+                    'form',
+                    { className: 'dataForm' },
                     _react2.default.createElement(
-                      "div",
-                      { className: "inputGroup" },
-                      _react2.default.createElement("input", { className: "dataInput", type: "text" }),
+                      'div',
+                      { className: 'inputGroup' },
+                      _react2.default.createElement('input', { className: 'dataInput', type: 'text' }),
                       _react2.default.createElement(
-                        "label",
+                        'label',
                         null,
-                        "Coupon Code"
+                        'Coupon Code'
                       )
                     )
                   )
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "tableRow__column--2x tableRow__bodyText" },
+                  'div',
+                  { className: 'tableRow__column--2x tableRow__bodyText' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "dataForm__buttonPanel" },
+                    'div',
+                    { className: 'dataForm__buttonPanel' },
                     _react2.default.createElement(
-                      "a",
-                      { className: "actionButton" },
-                      "apply"
+                      'a',
+                      { className: 'actionButton' },
+                      'apply'
                     )
                   )
                 ),
-                _react2.default.createElement("div", { className: " tableRow__column--2x tableRow__bodyText" }),
-                _react2.default.createElement("div", { className: "tableRow__num tableRow__bodyNum" })
+                _react2.default.createElement('div', { className: ' tableRow__column--2x tableRow__bodyText' }),
+                _react2.default.createElement('div', { className: 'tableRow__num tableRow__bodyNum' })
               ),
               _react2.default.createElement(
-                "div",
-                { className: "dataForm__buttonPanel" },
+                'div',
+                { className: 'dataForm__buttonPanel' },
                 _react2.default.createElement(
-                  "a",
-                  { className: "actionButton", href: "2-review-address.html" },
-                  "next"
+                  'a',
+                  { className: 'actionButton', href: '2-review-address.html' },
+                  'next'
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "2    Review Address(es)"
+              'div',
+              { className: 'stepTitle' },
+              '2    Review Address(es)'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "3    Billing Address"
+              'div',
+              { className: 'stepTitle' },
+              '3    Billing Address'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "4    Shipping Address"
+              'div',
+              { className: 'stepTitle' },
+              '4    Shipping Address'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "5    Payment Information"
+              'div',
+              { className: 'stepTitle' },
+              '5    Payment Information'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "6    Review Order"
+              'div',
+              { className: 'stepTitle' },
+              '6    Review Order'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "stepTitle" },
-              "7    Invoice"
+              'div',
+              { className: 'stepTitle' },
+              '7    Invoice'
             )
           ),
-          _react2.default.createElement(
-            "div",
-            { className: "l-panel cartStepsContainer" },
-            _react2.default.createElement(
-              "div",
-              { className: "cartSteps" },
-              _react2.default.createElement(
-                "div",
-                { className: "cartSteps__title" },
-                "Your Checkout Process"
-              ),
-              _react2.default.createElement(
-                "ul",
-                { className: "cartSteps__list" },
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Review Cart"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Review Address(es)"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Billing Address"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Shipping Address"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Payment Information"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Review Order"
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  "Invoice"
-                )
-              )
-            )
-          )
+          _react2.default.createElement(_cartSteps2.default, null)
         )
       );
     }
@@ -55757,7 +55710,7 @@ var ShoppingCartContainer = function (_React$Component) {
 
 exports.default = ShoppingCartContainer;
 
-},{"react":266}],284:[function(require,module,exports){
+},{"../views/shopping-cart/cart-steps":294,"react":266}],284:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56489,6 +56442,99 @@ var SearchPanel = function (_React$Component) {
 exports.default = SearchPanel;
 
 },{"react":266}],294:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CartStepsPanel = function (_React$Component) {
+	_inherits(CartStepsPanel, _React$Component);
+
+	function CartStepsPanel() {
+		_classCallCheck(this, CartStepsPanel);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(CartStepsPanel).apply(this, arguments));
+	}
+
+	_createClass(CartStepsPanel, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "l-panel cartStepsContainer" },
+				_react2.default.createElement(
+					"div",
+					{ className: "cartSteps" },
+					_react2.default.createElement(
+						"div",
+						{ className: "cartSteps__title" },
+						"Your Checkout Process"
+					),
+					_react2.default.createElement(
+						"ul",
+						{ className: "cartSteps__list" },
+						_react2.default.createElement(
+							"li",
+							null,
+							"Review Cart"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Review Address(es)"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Billing Address"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Shipping Address"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Review Order"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Payment Information"
+						),
+						_react2.default.createElement(
+							"li",
+							null,
+							"Invoice"
+						)
+					)
+				)
+			);
+		}
+	}]);
+
+	return CartStepsPanel;
+}(_react2.default.Component);
+
+exports.default = CartStepsPanel;
+
+},{"react":266}],295:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -56527,7 +56573,7 @@ var provider = _react2.default.createElement(
   });
 });
 
-},{"./router":297,"./store":299,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],295:[function(require,module,exports){
+},{"./router":298,"./store":300,"jquery":68,"react":266,"react-dom":76,"react-redux":79}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56569,7 +56615,7 @@ function booklist() {
 
 exports.default = booklist;
 
-},{"lodash":73}],296:[function(require,module,exports){
+},{"lodash":73}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56593,7 +56639,7 @@ var rootReducer = (0, _redux.combineReducers)({
 
 exports.default = rootReducer;
 
-},{"./booklist":295,"react-router-redux":85,"redux":272}],297:[function(require,module,exports){
+},{"./booklist":296,"react-router-redux":85,"redux":272}],298:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56685,7 +56731,7 @@ var router = _react2.default.createElement(
 
 exports.default = router;
 
-},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/containers/search-container":282,"./components/containers/shopping-cart-container":283,"./components/layouts/authors-layout":285,"./components/layouts/books-layout":286,"./components/layouts/clubs-layout":287,"./components/layouts/main-layout":288,"./components/layouts/search-layout":289,"react":266,"react-router":118}],298:[function(require,module,exports){
+},{"./components/containers/authors-container":279,"./components/containers/books-container":280,"./components/containers/clubs-container":281,"./components/containers/search-container":282,"./components/containers/shopping-cart-container":283,"./components/layouts/authors-layout":285,"./components/layouts/books-layout":286,"./components/layouts/clubs-layout":287,"./components/layouts/main-layout":288,"./components/layouts/search-layout":289,"react":266,"react-router":118}],299:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56734,7 +56780,7 @@ function deleteBook(id) {
   });
 }
 
-},{"../actions/action-creator":278,"../store":299,"axios":1}],299:[function(require,module,exports){
+},{"../actions/action-creator":278,"../store":300,"axios":1}],300:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -56752,5 +56798,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _redux.createStore)(_reducers2.default);
 exports.default = store;
 
-},{"./reducers":296,"redux":272}]},{},[294])
+},{"./reducers":297,"redux":272}]},{},[295])
 //# sourceMappingURL=bundle.js.map

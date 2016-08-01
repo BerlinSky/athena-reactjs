@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CartStepsPanel from '../views/shopping-cart/cart-steps';
+
 export default class ShoppingCartContainer extends React.Component {
   render() {
     return (
@@ -134,23 +136,9 @@ export default class ShoppingCartContainer extends React.Component {
             <div className="stepTitle">5 &nbsp;&nbsp; Payment Information</div>
             <div className="stepTitle">6 &nbsp;&nbsp; Review Order</div>
             <div className="stepTitle">7 &nbsp;&nbsp; Invoice</div>
-
           </div>
 
-          <div className="l-panel cartStepsContainer">
-            <div className="cartSteps">
-              <div className="cartSteps__title">Your Checkout Process</div>
-              <ul className="cartSteps__list">
-                <li>Review Cart</li>
-                <li>Review Address(es)</li>
-                <li>Billing Address</li>
-                <li>Shipping Address</li>
-                <li>Payment Information</li>
-                <li>Review Order</li>
-                <li>Invoice</li>
-              </ul>
-            </div>
-          </div>
+          <CartStepsPanel />
         </div>
 
       </section>
