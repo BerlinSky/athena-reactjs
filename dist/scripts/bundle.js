@@ -56343,7 +56343,7 @@ var BooklistPanel = function (_React$Component) {
 exports.default = BooklistPanel;
 
 },{"react":266}],293:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -56351,7 +56351,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -56372,7 +56372,8 @@ var SearchPanel = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SearchPanel).call(this));
 
     _this.state = {
-      comments: []
+      comments: [],
+      searchValue: 'Search ...'
     };
 
     _this._handleSubmit = _this._handleSubmit.bind(_this);
@@ -56380,23 +56381,30 @@ var SearchPanel = function (_React$Component) {
   }
 
   _createClass(SearchPanel, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "formContainer" },
+        'div',
+        { className: 'formContainer' },
         _react2.default.createElement(
-          "form",
-          { className: "searchBar" },
-          _react2.default.createElement("input", { className: "searchBar__inputText", placeholder: "Search for ..." }),
-          _react2.default.createElement("input", { className: "searchBar__button", type: "submit" })
+          'form',
+          { className: 'searchBar' },
+          _react2.default.createElement('input', { className: 'searchBar__inputText',
+            value: this.state.searchValue,
+            onChange: this._handleSubmit
+          }),
+          _react2.default.createElement('input', { className: 'searchBar__button', type: 'submit' })
         )
       );
     }
   }, {
-    key: "_handleSubmit",
+    key: '_handleSubmit',
     value: function _handleSubmit(e) {
       e.preventDefault();
+
+      this.setState({
+        searchValue: event.target.value.substr(0, 25)
+      });
     }
   }]);
 

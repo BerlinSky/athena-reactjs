@@ -5,7 +5,8 @@ export default class SearchPanel extends React.Component {
     super();
 
     this.state = {
-      comments: []
+      comments: [],
+      searchValue: 'Search ...'
     };
 
     this._handleSubmit = this._handleSubmit.bind(this);
@@ -16,7 +17,10 @@ export default class SearchPanel extends React.Component {
       <div className="formContainer">
 
         <form className="searchBar">
-          <input className="searchBar__inputText" placeholder="Search for ..." />
+          <input className="searchBar__inputText" 
+            value={this.state.searchValue}
+            onChange={this._handleSubmit}
+          />
           <input className="searchBar__button" type="submit" />
         </form>
 
@@ -27,5 +31,8 @@ export default class SearchPanel extends React.Component {
   _handleSubmit(e) {
     e.preventDefault();
 
+    this.setState({
+      searchValue: event.target.value.substr(0, 25)
+    })
   }
 }
