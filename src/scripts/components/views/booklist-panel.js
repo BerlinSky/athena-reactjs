@@ -8,6 +8,11 @@ export default class BooklistPanel extends React.Component {
   }
 
   render() {
+    let removeButton = '';
+    if(this.props.onRemove) {
+      removeButton = <a className="media__button" onClick={ this._handleRemove }>remove book</a>
+    }
+
     return (
      <div className="media">
        <img className="media__figure image" src={ this.props.imageUrl } alt="image" />
@@ -18,7 +23,7 @@ export default class BooklistPanel extends React.Component {
            { this.props.description }
          </p>
          <div className="buttonPanel">
-          <a className="media__button" onClick={ this._handleRemove }>remove book</a>
+          { removeButton }
          </div>
        </div>
      </div>

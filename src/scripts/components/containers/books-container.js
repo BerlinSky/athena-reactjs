@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import store from '../../store';
 import * as dataService from '../../services/booklist-service';
 
-export default class BooksContainer extends React.Component {
+export class BooksContainer extends React.Component {
   constructor() {
     super();
 
@@ -15,7 +15,7 @@ export default class BooksContainer extends React.Component {
       booklist: []
     };
 
-    this.apiUrl = '../data/booklist.json';
+    // this.apiUrl = '../data/booklist.json';
 
     this._removeBook = this._removeBook.bind(this);
     this._addBook = this._addBook.bind(this);
