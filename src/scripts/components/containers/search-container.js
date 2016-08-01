@@ -44,7 +44,8 @@ export default class SearchContainer extends React.Component {
   }
 
   _fetchBooklist() {
-    dataService.getBooklist();
+    // dataService.getBooklist();
+    dataService.searchBooklist('');
   }
 
   _searchByTitle(bookTitle) {

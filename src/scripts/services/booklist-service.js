@@ -1,6 +1,6 @@
 import axios from 'axios';
 import store from '../store';
-import { getBooklistAction, removeBookAction } from '../actions/action-creator';
+import { getBooklistAction, removeBookAction, searchBooklistAction } from '../actions/action-creator';
 
 export function getBooklist() {
 	return axios.get('http://localhost:3001/booklist')
@@ -13,12 +13,12 @@ export function getBooklist() {
 
 export function searchBooklist(searchTitle) {
   return axios.get('http://localhost:3001/master-booklist', {
-      params: {
-        title: searchTitle
-      }
+      // params: {
+      //   title: "Great Expectations"
+      // }
     })
     .then(response => {
-      store.dispatch(searchBooklistAction(response.data));
+      store.dispatch(searchBooklistAction("title", response.data));
       return response;
     });
 }

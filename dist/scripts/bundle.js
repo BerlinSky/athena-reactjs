@@ -54834,7 +54834,7 @@ function getBooklistAction(booklist) {
 	};
 }
 
-function searchBooklistAction(title) {
+function searchBooklistAction(title, booklist) {
 	return {
 		type: 'SEARCH_BOOK_LIST',
 		booklist: booklist
@@ -55290,7 +55290,8 @@ var SearchContainer = function (_React$Component) {
   }, {
     key: '_fetchBooklist',
     value: function _fetchBooklist() {
-      dataService.getBooklist();
+      // dataService.getBooklist();
+      dataService.searchBooklist('');
     }
   }, {
     key: '_searchByTitle',
@@ -56601,6 +56602,8 @@ function booklist() {
 			return Object.assign({}, state, { booklist: action.booklist });
 
 		case 'SEARCH_BOOK_LIST':
+			console.log("action.booklist", action.booklist);
+
 			return Object.assign({}, state, { booklist: action.booklist });
 
 		case 'REMOVE_BOOK':
@@ -56764,11 +56767,11 @@ function getBooklist() {
 
 function searchBooklist(searchTitle) {
   return _axios2.default.get('http://localhost:3001/master-booklist', {
-    params: {
-      title: searchTitle
-    }
+    // params: {
+    //   title: "Great Expectations"
+    // }
   }).then(function (response) {
-    _store2.default.dispatch(searchBooklistAction(response.data));
+    _store2.default.dispatch((0, _actionCreator.searchBooklistAction)("title", response.data));
     return response;
   });
 }
