@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import store from '../../store';
 import * as dataService from '../../services/booklist-service';
 
-export default class SearchContainer extends React.Component {
+export class SearchContainer extends React.Component {
 	constructor() {
 	  super();
 
@@ -44,12 +44,12 @@ export default class SearchContainer extends React.Component {
   }
 
   _fetchBooklist() {
-    // dataService.getBooklist();
     dataService.searchBooklist('');
   }
 
   _searchByTitle(bookTitle) {
   	console.log("search => ", bookTitle);
+    dataService.searchBooklist(bookTitle);
   }
 
  }

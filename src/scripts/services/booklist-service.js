@@ -12,9 +12,17 @@ export function getBooklist() {
 }
 
 export function searchBooklist(searchTitle) {
-  return axios.get('http://localhost:3001/master-booklist', {
+  const serverUrl = "http://localhost:3001";
+  let requestUrl = serverUrl + "/master-booklist";
+  if (searchTitle !== "*") { 
+    requestUrl += "?title=";
+    requestUrl += searchTitle;
+  }
+
+  return axios.get(requestUrl, {
       // params: {
-      //   title: "Great Expectations"
+      //   // title: "Great Expectations"
+      //   title: searchTitle
       // }
     })
     .then(response => {

@@ -55207,6 +55207,7 @@ exports.default = ClubsContainer;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.SearchContainer = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -55244,7 +55245,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SearchContainer = function (_React$Component) {
+var SearchContainer = exports.SearchContainer = function (_React$Component) {
   _inherits(SearchContainer, _React$Component);
 
   function SearchContainer() {
@@ -55290,21 +55291,18 @@ var SearchContainer = function (_React$Component) {
   }, {
     key: '_fetchBooklist',
     value: function _fetchBooklist() {
-      // dataService.getBooklist();
       dataService.searchBooklist('');
     }
   }, {
     key: '_searchByTitle',
     value: function _searchByTitle(bookTitle) {
       console.log("search => ", bookTitle);
+      dataService.searchBooklist(bookTitle);
     }
   }]);
 
   return SearchContainer;
 }(_react2.default.Component);
-
-exports.default = SearchContainer;
-
 
 var mapStateToProps = function mapStateToProps(store) {
   return {
@@ -56604,7 +56602,7 @@ function booklist() {
 		case 'SEARCH_BOOK_LIST':
 			console.log("action.booklist", action.booklist);
 
-			return Object.assign({}, state, { booklist: action.booklist });
+			return Object.assign({}, [state], { booklist: action.booklist });
 
 		case 'REMOVE_BOOK':
 			var newBooklist = _lodash2.default.filter(state.booklist, function (book) {
@@ -56766,9 +56764,17 @@ function getBooklist() {
 }
 
 function searchBooklist(searchTitle) {
-  return _axios2.default.get('http://localhost:3001/master-booklist', {
+  var serverUrl = "http://localhost:3001";
+  var requestUrl = serverUrl + "/master-booklist";
+  if (searchTitle !== "*") {
+    requestUrl += "?title=";
+    requestUrl += searchTitle;
+  }
+
+  return _axios2.default.get(requestUrl, {
     // params: {
-    //   title: "Great Expectations"
+    //   // title: "Great Expectations"
+    //   title: searchTitle
     // }
   }).then(function (response) {
     _store2.default.dispatch((0, _actionCreator.searchBooklistAction)("title", response.data));

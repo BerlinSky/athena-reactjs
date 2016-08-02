@@ -14,7 +14,7 @@ function booklist(state = initialState, action) {
 		case 'SEARCH_BOOK_LIST':
 			console.log("action.booklist", action.booklist);
 
-			return Object.assign({}, state, { booklist: action.booklist });
+			return Object.assign({}, [state], { booklist: action.booklist });
 
 		case 'REMOVE_BOOK':
 			const newBooklist = _.filter(state.booklist, book => book.id != action.id);
