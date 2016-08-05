@@ -1,17 +1,43 @@
+import $ from 'jquery';
+
 import axios from 'axios';
 import store from '../store';
 import { getBooklistAction, removeBookAction, searchBooklistAction } from '../actions/action-creator';
 
 export function getBooklist() {
 
-    console.log("Here!!5");
-    
+  return $.ajax({
+      url: "http://localhost:3001/booklist",
+      dataType: 'json'
+    })
+    .done (function(response) { 
+      store.dispatch(getBooklistAction(response));
+    })
+    .fail (function() { 
+      console.log("Error"); 
+    });
+
+  // return axios.get('http://localhost:3001/booklist')
+  //   .then(response => {
+  //     store.dispatch(getBooklistAction(response.data));
+
+  //     console.log(response.data);
+      
+  //     return response;
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
+}
+
+export function getBooklist_x() {
+
   return axios.get('http://localhost:3001/booklist')
     .then(response => {
       store.dispatch(getBooklistAction(response.data));
-    console.log("Here!!6");
 
       console.log(response.data);
+
       return response;
     })
     .catch(function (error) {

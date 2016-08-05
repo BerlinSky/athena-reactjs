@@ -56739,8 +56739,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getBooklist = getBooklist;
+exports.getBooklist_x = getBooklist_x;
 exports.searchBooklist = searchBooklist;
 exports.deleteBook = deleteBook;
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
 
 var _axios = require('axios');
 
@@ -56756,13 +56761,35 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function getBooklist() {
 
-  console.log("Here!!5");
+  return _jquery2.default.ajax({
+    url: "http://localhost:3001/booklist",
+    dataType: 'json'
+  }).done(function (response) {
+    _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response));
+  }).fail(function () {
+    console.log("Error");
+  });
+
+  // return axios.get('http://localhost:3001/booklist')
+  //   .then(response => {
+  //     store.dispatch(getBooklistAction(response.data));
+
+  //     console.log(response.data);
+
+  //     return response;
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   });
+}
+
+function getBooklist_x() {
 
   return _axios2.default.get('http://localhost:3001/booklist').then(function (response) {
     _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response.data));
-    console.log("Here!!6");
 
     console.log(response.data);
+
     return response;
   }).catch(function (error) {
     console.log(error);
@@ -56795,7 +56822,7 @@ function deleteBook(id) {
   });
 }
 
-},{"../actions/action-creator":278,"../store":300,"axios":1}],300:[function(require,module,exports){
+},{"../actions/action-creator":278,"../store":300,"axios":1,"jquery":68}],300:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
