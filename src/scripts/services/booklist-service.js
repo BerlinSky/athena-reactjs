@@ -3,11 +3,19 @@ import store from '../store';
 import { getBooklistAction, removeBookAction, searchBooklistAction } from '../actions/action-creator';
 
 export function getBooklist() {
-	return axios.get('http://localhost:3001/booklist')
-    // .then(response => response.data);
+
+    console.log("Here!!5");
+    
+  return axios.get('http://localhost:3001/booklist')
     .then(response => {
-    	store.dispatch(getBooklistAction(response.data));
-			return response;
+      store.dispatch(getBooklistAction(response.data));
+    console.log("Here!!6");
+
+      console.log(response.data);
+      return response;
+    })
+    .catch(function (error) {
+      console.log(error);
     });
 }
 
@@ -34,7 +42,7 @@ export function searchBooklist(searchTitle) {
 export function deleteBook(id) {
   // return axios.delete('http://localhost:3001/booklist/' + id);
   return axios.delete('http://localhost:3001/booklist/' + id)
-  	.then(() => {
-  		store.dispatch(removeBookAction(id));
-  	});
+    .then(() => {
+      store.dispatch(removeBookAction(id));
+    });
 }

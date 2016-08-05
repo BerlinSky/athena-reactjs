@@ -21,7 +21,7 @@ export class BooksContainer extends React.Component {
     this._addBook = this._addBook.bind(this);
   }
 
-  componentWillMount() {
+  componentWillMount() {    
     this._fetchBooklist();
   } 
 

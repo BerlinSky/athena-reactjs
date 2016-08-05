@@ -56755,11 +56755,17 @@ var _actionCreator = require('../actions/action-creator');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getBooklist() {
-  return _axios2.default.get('http://localhost:3001/booklist')
-  // .then(response => response.data);
-  .then(function (response) {
+
+  console.log("Here!!5");
+
+  return _axios2.default.get('http://localhost:3001/booklist').then(function (response) {
     _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response.data));
+    console.log("Here!!6");
+
+    console.log(response.data);
     return response;
+  }).catch(function (error) {
+    console.log(error);
   });
 }
 
