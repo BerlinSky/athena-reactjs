@@ -56790,14 +56790,20 @@ function searchBooklist(searchTitle) {
   var serverUrl = "http://localhost:3001";
   var requestUrl = serverUrl + "/master-booklist";
 
-  if (searchTitle !== "*") {
-    requestUrl += "?title=";
-    requestUrl += searchTitle;
-  }
+  // if (searchTitle !== "*") {
+  //   requestUrl += "?title=";
+  //   requestUrl += searchTitle;
+  // }
+
+  var params = {
+    title: searchTitle
+  };
 
   return _jquery2.default.ajax({
+    type: "GET",
     url: requestUrl,
-    dataType: 'json'
+    dataType: 'json',
+    data: params
   }).done(function (response) {
     _store2.default.dispatch((0, _actionCreator.searchBooklistAction)("title", response));
   }).fail(function () {

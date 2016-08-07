@@ -39,14 +39,20 @@ export function searchBooklist(searchTitle) {
   const serverUrl = "http://localhost:3001";
   let requestUrl = serverUrl + "/master-booklist";
 
-  if (searchTitle !== "*") { 
-    requestUrl += "?title=";
-    requestUrl += searchTitle;
+  // if (searchTitle !== "*") { 
+  //   requestUrl += "?title=";
+  //   requestUrl += searchTitle;
+  // }
+
+  let params = {
+    title: searchTitle
   }
 
  return $.ajax({
+    type: "GET",
     url: requestUrl,
-    dataType: 'json'
+    dataType: 'json',
+    data: params
   })
   .done (function(response) { 
     store.dispatch(searchBooklistAction("title", response));
