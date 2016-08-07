@@ -55273,19 +55273,19 @@ var SearchContainer = exports.SearchContainer = function (_React$Component) {
         'section',
         { className: 'l-mainContent mainContent' },
         _react2.default.createElement(_searchPanel2.default, { onSearch: this._searchByTitle }),
-        _react2.default.createElement(
-          'div',
-          { className: 'panelContainer' },
-          booklist
-        )
+        booklist
       );
     }
   }, {
     key: '_getBooklist',
     value: function _getBooklist() {
       return this.props.booklist.map(function (book) {
-        return _react2.default.createElement(_booklistPanel2.default, _extends({}, book, {
-          key: book.id }));
+        return _react2.default.createElement(
+          'div',
+          { className: 'panelContainer' },
+          _react2.default.createElement(_booklistPanel2.default, _extends({}, book, {
+            key: book.id }))
+        );
       });
     }
   }, {
@@ -56796,7 +56796,10 @@ function searchBooklist(searchTitle) {
 }
 
 function deleteBook(id) {
-  return _axios2.default.delete('http://localhost:3001/booklist/' + id).then(function () {
+  var serverUrl = "http://localhost:3001";
+  var requestUrl = serverUrl + "/booklist/";
+
+  return _axios2.default.delete(requestUrl + id).then(function () {
     _store2.default.dispatch((0, _actionCreator.removeBookAction)(id));
   });
 }

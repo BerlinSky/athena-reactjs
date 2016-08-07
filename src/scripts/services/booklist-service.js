@@ -22,7 +22,7 @@ export function getBooklist() {
 export function searchBooklist(searchTitle) {
 
   const serverUrl = "http://localhost:3001";
-  let requestUrl = serverUrl + "/master-booklist";
+  const requestUrl = serverUrl + "/master-booklist";
 
   let params = {
     title: searchTitle
@@ -47,8 +47,12 @@ export function searchBooklist(searchTitle) {
 }
 
 export function deleteBook(id) {
-  return axios.delete('http://localhost:3001/booklist/' + id)
+  const serverUrl = "http://localhost:3001";
+  const requestUrl = serverUrl + "/booklist/";
+
+  return axios.delete(requestUrl + id)
     .then(() => {
       store.dispatch(removeBookAction(id));
     });
 }
+

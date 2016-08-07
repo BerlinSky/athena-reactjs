@@ -27,9 +27,7 @@ export class SearchContainer extends React.Component {
 
 				<SearchPanel onSearch={ this._searchByTitle } />
 
-	      <div className="panelContainer">
-	        { booklist }
-	      </div>
+        { booklist }
 
       </section>
     )
@@ -37,9 +35,9 @@ export class SearchContainer extends React.Component {
 
   _getBooklist() {
     return this.props.booklist.map((book) => {
-      return <BooklistPanel
+      return <div className="panelContainer"><BooklistPanel
               {...book}
-              key={book.id} />
+              key={book.id} /></div>
     });
   }
 
