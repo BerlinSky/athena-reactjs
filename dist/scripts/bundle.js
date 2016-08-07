@@ -56739,7 +56739,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getBooklist = getBooklist;
-exports.getBooklist_x = getBooklist_x;
 exports.searchBooklist = searchBooklist;
 exports.deleteBook = deleteBook;
 
@@ -56769,50 +56768,52 @@ function getBooklist() {
   }).fail(function () {
     console.log("Error");
   });
-
-  // return axios.get('http://localhost:3001/booklist')
-  //   .then(response => {
-  //     store.dispatch(getBooklistAction(response.data));
-
-  //     console.log(response.data);
-
-  //     return response;
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
 }
 
-function getBooklist_x() {
+// export function getBooklist_x() {
 
-  return _axios2.default.get('http://localhost:3001/booklist').then(function (response) {
-    _store2.default.dispatch((0, _actionCreator.getBooklistAction)(response.data));
+//   return axios.get('http://localhost:3001/booklist')
+//     .then(response => {
+//       store.dispatch(getBooklistAction(response.data));
 
-    console.log(response.data);
+//       console.log(response.data);
 
-    return response;
-  }).catch(function (error) {
-    console.log(error);
-  });
-}
+//       return response;
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
 
 function searchBooklist(searchTitle) {
+
   var serverUrl = "http://localhost:3001";
   var requestUrl = serverUrl + "/master-booklist";
+
   if (searchTitle !== "*") {
     requestUrl += "?title=";
     requestUrl += searchTitle;
   }
 
-  return _axios2.default.get(requestUrl, {
-    // params: {
-    //   // title: "Great Expectations"
-    //   title: searchTitle
-    // }
-  }).then(function (response) {
-    _store2.default.dispatch((0, _actionCreator.searchBooklistAction)("title", response.data));
-    return response;
+  return _jquery2.default.ajax({
+    url: requestUrl,
+    dataType: 'json'
+  }).done(function (response) {
+    _store2.default.dispatch((0, _actionCreator.searchBooklistAction)("title", response));
+  }).fail(function () {
+    console.log("Error");
   });
+
+  // return axios.get(requestUrl, {
+  //     // params: {
+  //     //   // title: "Great Expectations"
+  //     //   title: searchTitle
+  //     // }
+  //   })
+  //   .then(response => {
+  //     store.dispatch(searchBooklistAction("title", response.data));
+  //     return response;
+  //   });
 }
 
 function deleteBook(id) {
