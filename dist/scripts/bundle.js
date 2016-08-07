@@ -56770,34 +56770,18 @@ function getBooklist() {
   });
 }
 
-// export function getBooklist_x() {
-
-//   return axios.get('http://localhost:3001/booklist')
-//     .then(response => {
-//       store.dispatch(getBooklistAction(response.data));
-
-//       console.log(response.data);
-
-//       return response;
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// }
-
 function searchBooklist(searchTitle) {
 
   var serverUrl = "http://localhost:3001";
   var requestUrl = serverUrl + "/master-booklist";
 
-  // if (searchTitle !== "*") {
-  //   requestUrl += "?title=";
-  //   requestUrl += searchTitle;
-  // }
-
   var params = {
     title: searchTitle
   };
+
+  if (searchTitle === "*") {
+    params = "";
+  }
 
   return _jquery2.default.ajax({
     type: "GET",
@@ -56809,21 +56793,9 @@ function searchBooklist(searchTitle) {
   }).fail(function () {
     console.log("Error");
   });
-
-  // return axios.get(requestUrl, {
-  //     // params: {
-  //     //   // title: "Great Expectations"
-  //     //   title: searchTitle
-  //     // }
-  //   })
-  //   .then(response => {
-  //     store.dispatch(searchBooklistAction("title", response.data));
-  //     return response;
-  //   });
 }
 
 function deleteBook(id) {
-  // return axios.delete('http://localhost:3001/booklist/' + id);
   return _axios2.default.delete('http://localhost:3001/booklist/' + id).then(function () {
     _store2.default.dispatch((0, _actionCreator.removeBookAction)(id));
   });
