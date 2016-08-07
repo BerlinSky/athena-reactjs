@@ -56797,9 +56797,10 @@ function searchBooklist(searchTitle) {
 
 function deleteBook(id) {
   var serverUrl = "http://localhost:3001";
-  var requestUrl = serverUrl + "/booklist/";
+  var requestUrl = serverUrl + "/booklist";
 
-  return _axios2.default.delete(requestUrl + id).then(function () {
+  // return axios.delete(requestUrl + id)
+  return _axios2.default.delete(requestUrl + '/' + id).then(function () {
     _store2.default.dispatch((0, _actionCreator.removeBookAction)(id));
   });
 }

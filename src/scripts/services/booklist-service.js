@@ -48,11 +48,16 @@ export function searchBooklist(searchTitle) {
 
 export function deleteBook(id) {
   const serverUrl = "http://localhost:3001";
-  const requestUrl = serverUrl + "/booklist/";
+  const requestUrl = serverUrl + "/booklist";
 
-  return axios.delete(requestUrl + id)
+  // return axios.delete(requestUrl + id)
+  return axios.delete(`${requestUrl}/${id}`)
     .then(() => {
       store.dispatch(removeBookAction(id));
     });
 }
+
+
+
+
 
